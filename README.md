@@ -1,4 +1,7 @@
 # Personal Website
+It's a work in progress!
+https://FOBkid20.github.io
+
 ## Resume
 I provide my full resume in what will eventually be a readable format
 
