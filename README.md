@@ -1,4 +1,3 @@
-"# Personal-Website" 
 # Personal Website
 ## Resume
 I provide my full resume in what will eventually be a readable format
