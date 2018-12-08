@@ -181,7 +181,7 @@ h6, .h6 {
 .s-beginning {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #FFFFFF;
+    background-color: transparent;
     color: #010507;
     position: relative;
     padding-left: 25px;
@@ -197,6 +197,17 @@ h6, .h6 {
     height: 100%;
     opacity: .8;
     background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 40, 120, 0.9) 100%);
+}
+
+.s-beginning .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    background-color: #CBFDFD; /*lighter blue - originally #90F9F9*/ 
+    z-index: -1;
 }
 
 /* ===================================================================
@@ -228,7 +239,8 @@ h6, .h6 {
     width: 100%;
     height: 100%;
     opacity: .9;
-    background-color: #90F9F9; /*lighter blue*/
+    background-color: #CBFDFD; /*lighter blue - originally #90F9F9*/ 
+    z-index: -1;
 }
 
 /* ------------------------------------------------------------------- 
@@ -347,6 +359,17 @@ h6, .h6 {
     z-index: -1;
 }
 
+.s-resume .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    background-color: #CBFDFD; /*lighter blue - originally #90F9F9*/ 
+    z-index: -1;
+}
+
 
 /* ===================================================================
  * # extracurriculars 
@@ -378,7 +401,7 @@ h6, .h6 {
     width: 100%;
     height: 100%;
     opacity: .9;
-    background-color: #90F9F9;
+    background-color: #CBFDFD;
     z-index: -1;
 }
 
