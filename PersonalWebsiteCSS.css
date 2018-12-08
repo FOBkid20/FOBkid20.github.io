@@ -329,7 +329,7 @@ h6, .h6 {
  * ------------------------------------------------------------------- */
 .s-resume {
     padding-bottom: 6rem;
-    background-color: #FFFFFF;
+    background-color: transparent;
     color: #010507;
     position: relative;
     padding-left: 25px;
@@ -344,8 +344,8 @@ h6, .h6 {
     height: 100%;
     opacity: .8;
     background: -webkit-linear-gradient(top, transparent 0%, rgba(10, 40, 120, 0.9) 100%);
+    z-index: -1;
 }
-
 
 
 /* ===================================================================
