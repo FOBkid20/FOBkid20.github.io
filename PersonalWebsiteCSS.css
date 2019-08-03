@@ -31,7 +31,7 @@ body {
     font-size: 1rem;
     color: #111133;  /* Navy Blue Text */
     margin: 0;
-    /*padding: 0;*/
+    line-height: 2rem;
 }
 
 /* ------------------------------------------------------------------- 
@@ -53,6 +53,11 @@ a:hover, a:active {
  * # typography & general theme styles
  * 
  * ------------------------------------------------------------------- */
+
+p {
+    padding-bottom: 1rem;
+}
+
 h1, h2, h3, h4, h5, h6, 
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "quattrocento", garamond;
@@ -70,7 +75,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6  {
 
 h6, .h6 {
     color: #111133;
-    margin-top: 1.2rem;
+    margin-top: 2.2rem;
     margin-bottom: .5rem;
 }
 
@@ -99,7 +104,7 @@ h3, .h3 {
 
 h4, .h4 {
     font-size: 2.1rem;
-    margin-top: 2rem;
+    margin-top: 4.5rem;
     margin-bottom: 1rem;
 }
 
@@ -121,7 +126,7 @@ h6, .h6 {
 .section-header {
     text-align: center;
     /*position: relative;*/
-    padding-top: 47px;
+    padding-top: 3rem;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -149,8 +154,9 @@ h6, .h6 {
     top: 0;
     left: 0;
     width: 100%;
-    height: 47px;
+    height: 3rem;
     z-index: 5000;
+    line-height: 1rem;
 
 }
 .main-nav a {
@@ -191,12 +197,14 @@ h6, .h6 {
 
 .s-home {
     padding-top: 16.2rem;
-    padding-bottom: 9rem;
+    padding-bottom: 11rem;
     background-color: transparent;
     color: #010507;
     position: relative;
     padding-left: 25px;
     padding-right: 25px;
+
+
 }
 
 .s-home .shadow-overlay {
@@ -394,6 +402,7 @@ h6, .h6 {
     height: 100%;
     background-color: transparent;
     position: relative;
+    padding-bottom: 3rem;
 }
 
 .s-extracurriculars .shadow-overlay {
@@ -418,6 +427,15 @@ h6, .h6 {
     z-index: -1;
 }
 
+/* To make an image appear when hovering over a link. Use <a href="javascript:;">Happiness Club.</a> to creat empty link in HTML.
+.s-extracurriculars a:hover:after {
+    content: url('NYCSilhouette.svg'); /* no need for qoutes *//*
+    display: block;
+    position: absolute;
+    left: 100px; /* change this value to one that suits you *//*
+    bottom: 1px; /* change this value to one that suits you *//*
+}
+
 .extracurriculars-content {
     width: 100%;
     height: 100%;
@@ -425,7 +443,7 @@ h6, .h6 {
     padding-bottom: 4rem;
     position: relative;
 }
-
+*/
 .extracurriculars-content__main {
     position: relative;
     padding-left: 25px;
