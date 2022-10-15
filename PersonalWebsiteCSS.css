@@ -198,15 +198,13 @@ h6 span{ position:absolute; top:-3rem;}
  * ------------------------------------------------------------------- */
 
 .s-home {
-    padding-top: 16.2rem;
-    padding-bottom: 11rem;
+    padding-top: 35vh;
+    padding-bottom: 40vh;
     background-color: transparent;
     color: #010507;
     position: relative;
     padding-left: 25px;
     padding-right: 25px;
-
-
 }
 
 .s-home .shadow-overlay {
@@ -278,9 +276,14 @@ h6 span{ position:absolute; top:-3rem;}
 }
 
 .aboutMe-content__main {
-    position: relative;
+    position: relative;/*
     padding-left: 25px;
-    padding-right: 8rem;  /* Leave room for aboutMe-social */
+    padding-right: 30vh;   Leave room for aboutMe-social 
+    padding-bottom: 20vh;*/
+
+    padding-left: 30vh;
+    padding-right: 25px;  /* Leave room for aboutMe-social */
+    padding-bottom: 20vh;
 }
 
 /* ------------------------------------------------------------------- 
@@ -291,8 +294,12 @@ h6 span{ position:absolute; top:-3rem;}
     list-style: none;
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 50%;/*
     right: 5.4rem;
+    -webkit-transform: translate3d(0, -50%, 0);
+    -ms-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);*/
+
     -webkit-transform: translate3d(0, -50%, 0);
     -ms-transform: translate3d(0, -50%, 0);
     transform: translate3d(0, -50%, 0);
@@ -316,7 +323,7 @@ h6 span{ position:absolute; top:-3rem;}
 }
 
 .aboutMe-social i, .aboutMe-social span {
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     line-height: 33px;
     -webkit-transition: all 0.5s ease-in-out;
@@ -336,9 +343,11 @@ h6 span{ position:absolute; top:-3rem;}
 }
 
 .aboutMe-social span {
+    position:absolute;
     color: #FFFFFF;
-    right: 4.5rem;
-    font-size: 1.3rem;
+    left: 3rem;
+    top: 16.5px;
+    font-size: 1.4rem;
     font-family: "quattrocento", sans-serif;
     opacity: 0;
     visibility: hidden;
