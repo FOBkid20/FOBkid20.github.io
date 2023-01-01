@@ -1,0 +1,128 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding:
+  20px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+form label, form input, form textarea {
+  display: block;
+  width: 100%;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form input, form textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+form input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* asked to make sections stand out more */
+
+section {
+  background-color: #f8f8f8;
+  padding: 20px;
+}
+
+section {
+  margin: 0;
+  padding: 20px;
+}
+
+
+#skills {
+  background-color: #333;
+  color: #fff;
+}
+
+#experience {
+  background-image: url(./experience-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  /*color: #fff;*/ /*had to change this because it blennded into the background*/
+  padding: 40px;
+}
+
+#projects {
+  background-color: #333;
+  color: #fff;
+}
+
+#contact {
+  background-color: #f8f8f8;
+}
+
