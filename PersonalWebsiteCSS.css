@@ -450,11 +450,11 @@ h6 span{ position:absolute; top:-3rem;}
 
 /* To make an image appear when hovering over a link. Use <a href="javascript:;">Happiness Club.</a> to creat empty link in HTML.
 .s-extracurriculars a:hover:after {
-    content: url('NYCSilhouette.svg'); /* no need for qoutes *//*
+    content: url('NYCSilhouette.svg');
     display: block;
     position: absolute;
-    left: 100px; /* change this value to one that suits you *//*
-    bottom: 1px; /* change this value to one that suits you *//*
+    left: 100px;
+    bottom: 1px;
 }
 
 .extracurriculars-content {
@@ -463,14 +463,12 @@ h6 span{ position:absolute; top:-3rem;}
     vertical-align: middle;
     padding-bottom: 4rem;
     position: relative;
-}
-*/
+} */
+
 .extracurriculars-content__main {
     position: relative;
     padding-left: 25px;
     padding-right: 25px;
-}
-
 }
 
 /* ===================================================================
