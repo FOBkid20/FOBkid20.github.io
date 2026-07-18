@@ -193,6 +193,7 @@
             marker.className = 'timeline-marker timeline-cat-' + evt.category;
             marker.style.left = x + 'px';
             marker.style.top = topPx + 'px';
+            marker.dataset.tooltip = evt.title;
             marker.setAttribute('aria-label', evt.title + ', ' + evt.displayDate);
             marker.addEventListener('click', function () {
                 showDetail(evt, marker);

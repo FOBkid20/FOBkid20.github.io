@@ -601,6 +601,36 @@ h6 span{ position:absolute; top:-3rem;}
     box-shadow: 0 0 0 4px rgba(0, 135, 204, .3);
 }
 
+/* Tooltip: a fixed, theme-independent color per category (deepened
+   versions of the marker hues) paired with white text, so it stays
+   readable regardless of whether the page is in light or dark mode. */
+.timeline-marker::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, -6px);
+    white-space: nowrap;
+    color: #FFFFFF;
+    font-size: .78rem;
+    font-weight: bold;
+    line-height: 1.2;
+    padding: .35rem .6rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .12s ease, transform .12s ease;
+    z-index: 20;
+}
+
+.timeline-marker:hover::after, .timeline-marker:focus::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -10px);
+}
+
 .timeline-bar {
     position: absolute;
     height: 8px;
@@ -661,6 +691,33 @@ h6 span{ position:absolute; top:-3rem;}
 .timeline-marker.timeline-cat-other, .timeline-bar.timeline-cat-other,
 .timeline-legend-item.timeline-cat-other .timeline-legend-dot {
     background-color: #8D99AE;
+}
+
+/* Tooltip backgrounds are intentionally not overridden in dark mode --
+   deepened so white tooltip text stays readable (WCAG AA) regardless
+   of theme, rather than trying to retune per theme. */
+.timeline-marker.timeline-cat-career::after {
+    background-color: #B3364A;
+}
+
+.timeline-marker.timeline-cat-education::after {
+    background-color: #006699;
+}
+
+.timeline-marker.timeline-cat-performing::after {
+    background-color: #6B4E96;
+}
+
+.timeline-marker.timeline-cat-projects::after {
+    background-color: #3D7F55;
+}
+
+.timeline-marker.timeline-cat-clubs::after {
+    background-color: #96661E;
+}
+
+.timeline-marker.timeline-cat-other::after {
+    background-color: #5A6478;
 }
 
 @media screen and (max-width: 600px) {
