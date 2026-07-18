@@ -40,7 +40,7 @@
         { id: 'petcostume', title: 'Pet Costume Contest', displayDate: 'Fall 2020', start: { y: 2020, m: 9 }, end: { y: 2020, m: 11 }, category: 'clubs', description: 'Remote Happiness Club event judging pets in Halloween costumes.', link: { href: './Happiness.html', text: 'See photos' } },
         { id: 'nuresearch', title: 'Research Assistant, Northwestern University', displayDate: 'Sep 2020 – Jun 2021', start: { y: 2020, m: 9 }, end: { y: 2021, m: 6 }, category: 'career', description: 'Predicted opioid use and high-risk behaviors from Reddit data, and analyzed gender bias in movie reviews.' },
         { id: 'lunarnewyear', title: 'Lunar New Year Cabaret', displayDate: '2020–2021', start: { y: 2021, m: 1 }, category: 'performing', description: 'Contributed a song to a virtual cabaret celebrating the new year amid rising anti-Asian racism during the pandemic.' },
-        { id: 'bny', title: 'Technical Product Manager, BNY Mellon', displayDate: 'Aug 2021 – Present', start: { y: 2021, m: 8 }, ongoing: true, category: 'career', description: 'Led development of an award-winning company intranet reaching 40,000+ employees.', link: { href: '../index.html#resume' } }
+        { id: 'bny', title: 'Technical Product Manager, Bank of New York', displayDate: 'Aug 2021 – Jul 2026', start: { y: 2021, m: 8 }, end: { y: 2026, m: 7 }, category: 'career', description: 'Led development of an award-winning company intranet reaching 40,000+ employees.', link: { href: '../index.html#resume' } }
     ];
 
     var CATEGORIES = [
