@@ -509,6 +509,167 @@ h6 span{ position:absolute; top:-3rem;}
 }
 
 /* ===================================================================
+ * # timeline
+ *
+ * ------------------------------------------------------------------- */
+.timeline-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.5rem;
+    margin-bottom: 1rem;
+    font-size: .85rem;
+}
+
+.timeline-legend-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.timeline-legend-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: .4rem;
+}
+
+.timeline-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid rgba(1, 5, 7, 0.15);
+    border-bottom: 1px solid rgba(1, 5, 7, 0.15);
+    padding: 10px 0;
+}
+
+.timeline-track {
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: currentColor;
+    opacity: .3;
+}
+
+.timeline-tick {
+    position: absolute;
+}
+
+.timeline-tick::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 10px;
+    background-color: currentColor;
+    opacity: .4;
+}
+
+.timeline-tick-label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    transform: translateX(-50%);
+    font-size: .75rem;
+    opacity: .6;
+    white-space: nowrap;
+}
+
+.timeline-marker {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.timeline-marker:focus {
+    outline: 2px solid #0087cc;
+    outline-offset: 2px;
+}
+
+.timeline-marker.is-active {
+    box-shadow: 0 0 0 4px rgba(0, 135, 204, .3);
+}
+
+.timeline-bar {
+    position: absolute;
+    height: 8px;
+    border-radius: 4px;
+    opacity: .85;
+}
+
+.timeline-detail {
+    min-height: 6rem;
+    padding-top: 1.2rem;
+    margin-top: .5rem;
+    border-top: 1px solid rgba(1, 5, 7, 0.15);
+}
+
+.timeline-detail-title {
+    margin: 0 0 .25rem;
+}
+
+.timeline-detail-date {
+    opacity: .7;
+    font-size: .85rem;
+    margin: 0 0 .5rem;
+}
+
+.timeline-detail-desc {
+    margin: 0 0 .5rem;
+}
+
+.timeline-detail-hint {
+    opacity: .6;
+}
+
+.timeline-marker.timeline-cat-career, .timeline-bar.timeline-cat-career,
+.timeline-legend-item.timeline-cat-career .timeline-legend-dot {
+    background-color: #2A6F97;
+}
+
+.timeline-marker.timeline-cat-education, .timeline-bar.timeline-cat-education,
+.timeline-legend-item.timeline-cat-education .timeline-legend-dot {
+    background-color: #0087CC;
+}
+
+.timeline-marker.timeline-cat-performing, .timeline-bar.timeline-cat-performing,
+.timeline-legend-item.timeline-cat-performing .timeline-legend-dot {
+    background-color: #B5838D;
+}
+
+.timeline-marker.timeline-cat-projects, .timeline-bar.timeline-cat-projects,
+.timeline-legend-item.timeline-cat-projects .timeline-legend-dot {
+    background-color: #4C9A6A;
+}
+
+.timeline-marker.timeline-cat-clubs, .timeline-bar.timeline-cat-clubs,
+.timeline-legend-item.timeline-cat-clubs .timeline-legend-dot {
+    background-color: #E0A458;
+}
+
+.timeline-marker.timeline-cat-other, .timeline-bar.timeline-cat-other,
+.timeline-legend-item.timeline-cat-other .timeline-legend-dot {
+    background-color: #8D99AE;
+}
+
+@media screen and (max-width: 600px) {
+    .timeline-legend {
+        font-size: .75rem;
+    }
+}
+
+/* ===================================================================
  * # theme toggle button
  *
  * ------------------------------------------------------------------- */
@@ -603,6 +764,45 @@ html.dark-mode .s-resume .overlay,
 html.dark-mode .s-extracurriculars .overlay,
 html.dark-mode .s-projects .overlay {
     background-color: #151515;
+}
+
+html.dark-mode .timeline-scroll,
+html.dark-mode .timeline-detail {
+    border-color: rgba(168, 219, 219, 0.25);
+}
+
+html.dark-mode .timeline-marker {
+    border-color: #121212;
+}
+
+html.dark-mode .timeline-marker.timeline-cat-career, html.dark-mode .timeline-bar.timeline-cat-career,
+html.dark-mode .timeline-legend-item.timeline-cat-career .timeline-legend-dot {
+    background-color: #63B3ED;
+}
+
+html.dark-mode .timeline-marker.timeline-cat-education, html.dark-mode .timeline-bar.timeline-cat-education,
+html.dark-mode .timeline-legend-item.timeline-cat-education .timeline-legend-dot {
+    background-color: #7CC6FF;
+}
+
+html.dark-mode .timeline-marker.timeline-cat-performing, html.dark-mode .timeline-bar.timeline-cat-performing,
+html.dark-mode .timeline-legend-item.timeline-cat-performing .timeline-legend-dot {
+    background-color: #E0B8C2;
+}
+
+html.dark-mode .timeline-marker.timeline-cat-projects, html.dark-mode .timeline-bar.timeline-cat-projects,
+html.dark-mode .timeline-legend-item.timeline-cat-projects .timeline-legend-dot {
+    background-color: #7FD99A;
+}
+
+html.dark-mode .timeline-marker.timeline-cat-clubs, html.dark-mode .timeline-bar.timeline-cat-clubs,
+html.dark-mode .timeline-legend-item.timeline-cat-clubs .timeline-legend-dot {
+    background-color: #F4C27A;
+}
+
+html.dark-mode .timeline-marker.timeline-cat-other, html.dark-mode .timeline-bar.timeline-cat-other,
+html.dark-mode .timeline-legend-item.timeline-cat-other .timeline-legend-dot {
+    background-color: #B8C4D9;
 }
 
 /*# sourceMappingURL=main.css.map */
