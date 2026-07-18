@@ -635,7 +635,7 @@ h6 span{ position:absolute; top:-3rem;}
 
 .timeline-marker.timeline-cat-career, .timeline-bar.timeline-cat-career,
 .timeline-legend-item.timeline-cat-career .timeline-legend-dot {
-    background-color: #2A6F97;
+    background-color: #D1495B;
 }
 
 .timeline-marker.timeline-cat-education, .timeline-bar.timeline-cat-education,
@@ -645,7 +645,7 @@ h6 span{ position:absolute; top:-3rem;}
 
 .timeline-marker.timeline-cat-performing, .timeline-bar.timeline-cat-performing,
 .timeline-legend-item.timeline-cat-performing .timeline-legend-dot {
-    background-color: #B5838D;
+    background-color: #7B5EA7;
 }
 
 .timeline-marker.timeline-cat-projects, .timeline-bar.timeline-cat-projects,
@@ -777,7 +777,7 @@ html.dark-mode .timeline-marker {
 
 html.dark-mode .timeline-marker.timeline-cat-career, html.dark-mode .timeline-bar.timeline-cat-career,
 html.dark-mode .timeline-legend-item.timeline-cat-career .timeline-legend-dot {
-    background-color: #63B3ED;
+    background-color: #FF6B81;
 }
 
 html.dark-mode .timeline-marker.timeline-cat-education, html.dark-mode .timeline-bar.timeline-cat-education,
@@ -787,7 +787,7 @@ html.dark-mode .timeline-legend-item.timeline-cat-education .timeline-legend-dot
 
 html.dark-mode .timeline-marker.timeline-cat-performing, html.dark-mode .timeline-bar.timeline-cat-performing,
 html.dark-mode .timeline-legend-item.timeline-cat-performing .timeline-legend-dot {
-    background-color: #E0B8C2;
+    background-color: #C9A6E0;
 }
 
 html.dark-mode .timeline-marker.timeline-cat-projects, html.dark-mode .timeline-bar.timeline-cat-projects,

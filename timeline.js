@@ -12,32 +12,32 @@
         { id: 'malingue', title: 'Intern, Edouard Malingue Gallery Hong Kong', displayDate: 'Summer 2017', start: { y: 2017, m: 6 }, end: { y: 2017, m: 8 }, category: 'career', description: 'Maintained the gallery’s digital presence and researched artists for an exhibition.' },
         { id: 'dunwell', title: 'Employee, Dun-Well Donuts', displayDate: 'May 2017 – Jun 2017', start: { y: 2017, m: 5 }, end: { y: 2017, m: 6 }, category: 'career', description: 'Independently oversaw the Manhattan location.' },
         { id: 'northwestern', title: 'Northwestern University', displayDate: 'Sep 2017 – Jun 2021', start: { y: 2017, m: 9 }, end: { y: 2021, m: 6 }, category: 'education', description: 'Computer Science & Linguistics double major, Dean’s List, 3.7 GPA.' },
-        { id: 'snowday', title: 'Snow Day (Seesaw Theatre)', displayDate: 'Winter 2018', start: { y: 2018, m: 1 }, category: 'performing', description: 'Adventure Guide/Cast Member; performed as a student and puppeteered the Snow Bunny.' },
-        { id: 'pieaprof2018', title: 'Pie a Professor', displayDate: 'Winter 2018', start: { y: 2018, m: 3 }, category: 'clubs', description: 'Recruited professors willing to be pied in the face for this Happiness Club Pi Day event.', link: { href: './Happiness.html', text: 'See photos' } },
+        { id: 'snowday', title: 'Snow Day (Seesaw Theatre)', displayDate: 'Winter 2018', start: { y: 2018, m: 1 }, end: { y: 2018, m: 3 }, category: 'performing', description: 'Adventure Guide/Cast Member; performed as a student and puppeteered the Snow Bunny.' },
+        { id: 'pieaprof2018', title: 'Pie a Professor', displayDate: 'Winter 2018', start: { y: 2018, m: 1 }, end: { y: 2018, m: 3 }, category: 'clubs', description: 'Recruited professors willing to be pied in the face for this Happiness Club Pi Day event.', link: { href: './Happiness.html', text: 'See photos' } },
         { id: 'chiomega', title: 'Joined Chi Omega Sorority', displayDate: 'January 2018', start: { y: 2018, m: 1 }, category: 'clubs' },
-        { id: 'wanderland', title: 'Wanderland (Seesaw Theatre)', displayDate: 'Spring 2018', start: { y: 2018, m: 4 }, category: 'performing', description: 'Played The Fawn in this Seesaw Theatre spring production.' },
-        { id: 'smokemirrors2018', title: 'Smoke & Mirrors spring show', displayDate: 'Spring 2018', start: { y: 2018, m: 4 }, category: 'performing', description: 'Performed a rope act as Vice President of Northwestern’s magic club.' },
+        { id: 'wanderland', title: 'Wanderland (Seesaw Theatre)', displayDate: 'Spring 2018', start: { y: 2018, m: 4 }, end: { y: 2018, m: 6 }, category: 'performing', description: 'Played The Fawn in this Seesaw Theatre spring production.' },
+        { id: 'smokemirrors2018', title: 'Smoke & Mirrors spring show', displayDate: 'Spring 2018', start: { y: 2018, m: 4 }, end: { y: 2018, m: 6 }, category: 'performing', description: 'Performed a rope act as Vice President of Northwestern’s magic club.' },
         { id: 'lodo', title: 'Bioinformatics Research Assistant, Lodo Therapeutics', displayDate: 'Summer 2018', start: { y: 2018, m: 6 }, end: { y: 2018, m: 8 }, category: 'career', description: 'Built R tools for data processing and visualization, identifying over 4,500 data inconsistencies.' },
         { id: 'website', title: 'Built this personal website', displayDate: '2018', start: { y: 2018, m: 6 }, category: 'projects', description: 'Created from scratch with HTML and CSS, and updated ever since.' },
         { id: 'thoughtjar', title: 'Thought Jar (BuildHer 2018)', displayDate: '2018', start: { y: 2018, m: 9 }, category: 'projects', description: 'iPhone app in React Native providing a daily positive thought. Won Best Beginner Hack.' },
         { id: 'heartbeat', title: 'HeartBeat (ByteHacks 2018)', displayDate: 'Sep 1, 2018', start: { y: 2018, m: 9 }, category: 'projects', description: 'Website generating a Spotify playlist customized by mood via facial recognition. Won Best Design.' },
         { id: 'wic', title: 'Member, Women in Computing Club', displayDate: 'Sep 2018 – 2021', start: { y: 2018, m: 9 }, end: { y: 2021, m: 6 }, category: 'clubs', description: 'Mentored a freshman Computer Science major as a senior.' },
         { id: 'fam', title: 'Fam! (.dev Competition)', displayDate: 'Winter–Spring 2019', start: { y: 2019, m: 1 }, end: { y: 2019, m: 4 }, category: 'projects', description: 'Led a team building an iPhone family-tree app in React Native. Won 1st place.' },
-        { id: 'rockinrodeo', title: 'Rockin’ Rodeo (Seesaw Theatre)', displayDate: 'Winter 2019', start: { y: 2019, m: 1 }, category: 'performing', description: 'Cowgirl Adventure Guide in this Seesaw Theatre winter production.' },
-        { id: 'smokemirrors2019', title: 'Smoke & Mirrors spring show', displayDate: 'Spring 2019', start: { y: 2019, m: 4 }, category: 'performing', description: 'Performed a telepathy act as Vice President of Northwestern’s magic club.' },
+        { id: 'rockinrodeo', title: 'Rockin’ Rodeo (Seesaw Theatre)', displayDate: 'Winter 2019', start: { y: 2019, m: 1 }, end: { y: 2019, m: 3 }, category: 'performing', description: 'Cowgirl Adventure Guide in this Seesaw Theatre winter production.' },
+        { id: 'smokemirrors2019', title: 'Smoke & Mirrors spring show', displayDate: 'Spring 2019', start: { y: 2019, m: 4 }, end: { y: 2019, m: 6 }, category: 'performing', description: 'Performed a telepathy act as Vice President of Northwestern’s magic club.' },
         { id: 'happinessexec', title: 'Happiness Club Executive Board', displayDate: '2019', start: { y: 2019, m: 1 }, category: 'clubs', description: 'Served on the Happiness Club Executive Board.', link: { href: './Happiness.html', text: 'See photos' } },
         { id: 'bose', title: 'NLP Intern, Bose Corporation', displayDate: 'Summer 2019', start: { y: 2019, m: 6 }, end: { y: 2019, m: 8 }, category: 'career', description: 'Built a rule-based text categorization service and a topic aggregation algorithm using word embeddings.', link: { href: '#Bose' } },
         { id: 'parisabroad', title: 'Study Abroad, Paris', displayDate: 'Fall 2019', start: { y: 2019, m: 9 }, end: { y: 2019, m: 12 }, category: 'education', description: 'Studied sociology at the Sorbonne and ballet/pointe at the Marais School of Dance.' },
         { id: 'metmoon', title: 'Me & the Moon (Seesaw Theatre)', displayDate: 'Jan–Mar 2020', start: { y: 2020, m: 1 }, end: { y: 2020, m: 3 }, category: 'performing', description: 'Assistant-directed and stepped in as an Adventure Guide for several performances.' },
         { id: 'recipetransformer', title: 'Recipe Transformer', displayDate: 'Feb–Mar 2020', start: { y: 2020, m: 2 }, end: { y: 2020, m: 3 }, category: 'projects', description: 'NLP class project transforming recipes according to specifications like cuisine.' },
         { id: 'amazon', title: 'SDE Intern, Amazon', displayDate: 'Summer 2020', start: { y: 2020, m: 6 }, end: { y: 2020, m: 8 }, category: 'career', description: 'Built granular latency metrics for Fire TV devices with a React frontend visualization.' },
-        { id: 'internprep', title: 'Intern Prep (Amazon Hackathon)', displayDate: 'Summer 2020', start: { y: 2020, m: 7 }, category: 'projects', description: 'Led a team building an Alexa Skill to help incoming interns prepare before their start date.' },
-        { id: 'orcarug', title: 'Orca rug', displayDate: 'Summer 2020', start: { y: 2020, m: 7 }, category: 'other', description: 'Latch-hooked an orca rug while home in Massachusetts during quarantine.' },
+        { id: 'internprep', title: 'Intern Prep (Amazon Hackathon)', displayDate: 'Summer 2020', start: { y: 2020, m: 6 }, end: { y: 2020, m: 8 }, category: 'projects', description: 'Led a team building an Alexa Skill to help incoming interns prepare before their start date.' },
+        { id: 'orcarug', title: 'Orca rug', displayDate: 'Summer 2020', start: { y: 2020, m: 6 }, end: { y: 2020, m: 8 }, category: 'other', description: 'Latch-hooked an orca rug while home in Massachusetts during quarantine.' },
         { id: 'avms', title: 'A Very Merry Sanctuary (Seesaw Theatre)', displayDate: '2020', start: { y: 2020, m: 5 }, category: 'performing', description: 'Directed Seesaw’s Spring production, delivered as an interactive website with mail-delivered props due to the pandemic.', link: { href: '#AVMS' } },
         { id: 'outsidelines', title: 'Outside the Lines (Seesaw Theatre)', displayDate: '2020', start: { y: 2020, m: 5 }, category: 'performing', description: 'Assistant-directed; the performance was ultimately cancelled due to Covid-19.' },
         { id: 'chicagoseminar', title: 'Chicago PD Home Invasions Project', displayDate: 'Fall 2020', start: { y: 2020, m: 9 }, end: { y: 2020, m: 12 }, category: 'projects', description: 'Data science seminar project analyzing the Chicago Police Department’s record with home invasions.', link: { href: '#CPD' } },
-        { id: 'powerpointparty', title: 'PowerPoint Party', displayDate: 'Fall 2020', start: { y: 2020, m: 10 }, category: 'clubs', description: 'Remote Happiness Club event where members shared a 5-minute PowerPoint on anything of their choosing.', link: { href: './Happiness.html', text: 'See photos' } },
-        { id: 'petcostume', title: 'Pet Costume Contest', displayDate: 'Fall 2020', start: { y: 2020, m: 10 }, category: 'clubs', description: 'Remote Happiness Club event judging pets in Halloween costumes.', link: { href: './Happiness.html', text: 'See photos' } },
+        { id: 'powerpointparty', title: 'PowerPoint Party', displayDate: 'Fall 2020', start: { y: 2020, m: 9 }, end: { y: 2020, m: 11 }, category: 'clubs', description: 'Remote Happiness Club event where members shared a 5-minute PowerPoint on anything of their choosing.', link: { href: './Happiness.html', text: 'See photos' } },
+        { id: 'petcostume', title: 'Pet Costume Contest', displayDate: 'Fall 2020', start: { y: 2020, m: 9 }, end: { y: 2020, m: 11 }, category: 'clubs', description: 'Remote Happiness Club event judging pets in Halloween costumes.', link: { href: './Happiness.html', text: 'See photos' } },
         { id: 'nuresearch', title: 'Research Assistant, Northwestern University', displayDate: 'Sep 2020 – Jun 2021', start: { y: 2020, m: 9 }, end: { y: 2021, m: 6 }, category: 'career', description: 'Predicted opioid use and high-risk behaviors from Reddit data, and analyzed gender bias in movie reviews.' },
         { id: 'lunarnewyear', title: 'Lunar New Year Cabaret', displayDate: '2020–2021', start: { y: 2021, m: 1 }, category: 'performing', description: 'Contributed a song to a virtual cabaret celebrating the new year amid rising anti-Asian racism during the pandemic.' },
         { id: 'bny', title: 'Technical Product Manager, BNY Mellon', displayDate: 'Aug 2021 – Present', start: { y: 2021, m: 8 }, ongoing: true, category: 'career', description: 'Led development of an award-winning company intranet reaching 40,000+ employees.', link: { href: '../index.html#resume' } }
@@ -128,14 +128,17 @@
             track.appendChild(tick);
         }
 
-        // Lane assignment (stack downward from baseline to avoid overlap)
+        // Lane assignment (stack downward from baseline to avoid overlap).
+        // occupiedEndX is the marker's x for point events, or the bar's
+        // right edge for ranged events, so a long bar reserves its lane
+        // for its full width rather than just its start point.
         var laneLastX = {};
-        function assignLane(x) {
+        function assignLane(x, occupiedEndX) {
             var lane = 0;
             while (laneLastX[lane] !== undefined && (x - laneLastX[lane]) < MARKER_MIN_GAP) {
                 lane++;
             }
-            laneLastX[lane] = x;
+            laneLastX[lane] = occupiedEndX;
             return lane;
         }
 
@@ -172,7 +175,7 @@
                 endX = (maxMonth - minMonth) * PX_PER_MONTH;
             }
 
-            var lane = assignLane(x);
+            var lane = assignLane(x, endX !== null && endX > x ? endX : x);
             if (lane > maxLaneUsed) maxLaneUsed = lane;
             var topPx = BASELINE_TOP + 16 + lane * LANE_HEIGHT;
 
