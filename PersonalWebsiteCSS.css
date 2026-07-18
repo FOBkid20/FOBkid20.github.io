@@ -509,58 +509,100 @@ h6 span{ position:absolute; top:-3rem;}
 }
 
 /* ===================================================================
- * # dark mode
+ * # theme toggle button
  *
  * ------------------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #121212;
-        color: #A8DBDB;
-    }
+.theme-toggle-btn {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 1.1rem;
+    line-height: 1rem;
+    padding: 15px 20px;
+    margin: 0;
+    cursor: pointer;
+}
 
-    a {
-        color: #DBFDFD;
-    }
+.theme-toggle-btn:hover, .theme-toggle-btn:focus {
+    color: #DBFDFD;
+}
 
-    a:hover, a:focus, a:active {
-        color: #FFFFFF;
-    }
+@media screen and (max-width: 600px) {
+  .theme-toggle-btn {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+}
 
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-        color: #55bbcc;
-    }
+/* ===================================================================
+ * # dark mode
+ *
+ * Applied via a .dark-mode class on <html>, set synchronously by
+ * theme.js (in <head>, before the body paints) based on a saved
+ * preference or, absent one, the system's prefers-color-scheme.
+ * ------------------------------------------------------------------- */
+html.dark-mode body {
+    background: #121212;
+    color: #A8DBDB;
+}
 
-    .main-nav, .main-nav a, .main-nav a:hover, .main-nav a:focus {
-        background-color: #000000;
-    }
+html.dark-mode a {
+    color: #DBFDFD;
+}
 
-    .main-nav a, .main-nav li a {
-        color: #A8DBDB;
-    }
+html.dark-mode a:hover, html.dark-mode a:focus, html.dark-mode a:active {
+    color: #FFFFFF;
+}
 
-    .main-nav a:hover, .main-nav a:focus {
-        color: #FFFFFF;
-    }
+html.dark-mode h1, html.dark-mode .h1,
+html.dark-mode h2, html.dark-mode .h2,
+html.dark-mode h3, html.dark-mode .h3,
+html.dark-mode h4, html.dark-mode .h4,
+html.dark-mode h5, html.dark-mode .h5,
+html.dark-mode h6, html.dark-mode .h6 {
+    color: #55bbcc;
+}
 
-    .s-home, .s-resume, .s-projects {
-        color: #A8DBDB;
-    }
+html.dark-mode .main-nav, html.dark-mode .main-nav a,
+html.dark-mode .main-nav a:hover, html.dark-mode .main-nav a:focus {
+    background-color: #000000;
+}
 
-    .s-home .shadow-overlay,
-    .s-aboutMe .shadow-overlay,
-    .s-resume .shadow-overlay,
-    .s-extracurriculars .shadow-overlay,
-    .s-projects .shadow-overlay {
-        background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 15, 1) 100%);
-    }
+html.dark-mode .main-nav a, html.dark-mode .main-nav li a {
+    color: #A8DBDB;
+}
 
-    .s-home .overlay,
-    .s-aboutMe .overlay,
-    .s-resume .overlay,
-    .s-extracurriculars .overlay,
-    .s-projects .overlay {
-        background-color: #151515;
-    }
+html.dark-mode .main-nav a:hover, html.dark-mode .main-nav a:focus {
+    color: #FFFFFF;
+}
+
+html.dark-mode .theme-toggle-btn {
+    color: #A8DBDB;
+}
+
+html.dark-mode .theme-toggle-btn:hover, html.dark-mode .theme-toggle-btn:focus {
+    color: #FFFFFF;
+}
+
+html.dark-mode .s-home, html.dark-mode .s-resume, html.dark-mode .s-projects {
+    color: #A8DBDB;
+}
+
+html.dark-mode .s-home .shadow-overlay,
+html.dark-mode .s-aboutMe .shadow-overlay,
+html.dark-mode .s-resume .shadow-overlay,
+html.dark-mode .s-extracurriculars .shadow-overlay,
+html.dark-mode .s-projects .shadow-overlay {
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 15, 1) 100%);
+}
+
+html.dark-mode .s-home .overlay,
+html.dark-mode .s-aboutMe .overlay,
+html.dark-mode .s-resume .overlay,
+html.dark-mode .s-extracurriculars .overlay,
+html.dark-mode .s-projects .overlay {
+    background-color: #151515;
 }
 
 /*# sourceMappingURL=main.css.map */
