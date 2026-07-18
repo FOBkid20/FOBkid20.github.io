@@ -508,4 +508,59 @@ h6 span{ position:absolute; top:-3rem;}
     z-index: -1;
 }
 
+/* ===================================================================
+ * # dark mode
+ *
+ * ------------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #121212;
+        color: #A8DBDB;
+    }
+
+    a {
+        color: #DBFDFD;
+    }
+
+    a:hover, a:focus, a:active {
+        color: #FFFFFF;
+    }
+
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+        color: #55bbcc;
+    }
+
+    .main-nav, .main-nav a, .main-nav a:hover, .main-nav a:focus {
+        background-color: #000000;
+    }
+
+    .main-nav a, .main-nav li a {
+        color: #A8DBDB;
+    }
+
+    .main-nav a:hover, .main-nav a:focus {
+        color: #FFFFFF;
+    }
+
+    .s-home, .s-resume, .s-projects {
+        color: #A8DBDB;
+    }
+
+    .s-home .shadow-overlay,
+    .s-aboutMe .shadow-overlay,
+    .s-resume .shadow-overlay,
+    .s-extracurriculars .shadow-overlay,
+    .s-projects .shadow-overlay {
+        background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 15, 1) 100%);
+    }
+
+    .s-home .overlay,
+    .s-aboutMe .overlay,
+    .s-resume .overlay,
+    .s-extracurriculars .overlay,
+    .s-projects .overlay {
+        background-color: #151515;
+    }
+}
+
 /*# sourceMappingURL=main.css.map */
