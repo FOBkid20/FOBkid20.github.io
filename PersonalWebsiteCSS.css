@@ -448,6 +448,31 @@ h6 span{ position:absolute; top:-3rem;}
     z-index: -1;
 }
 
+.resume-toggle-btn {
+    background-color: #0087cc;
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 1.5rem 0;
+    cursor: pointer;
+}
+
+.resume-toggle-btn:hover, .resume-toggle-btn:focus {
+    background-color: #010507;
+}
+
+html.dark-mode .resume-toggle-btn {
+    background-color: #55bbcc;
+    color: #121212;
+}
+
+html.dark-mode .resume-toggle-btn:hover, html.dark-mode .resume-toggle-btn:focus {
+    background-color: #A8DBDB;
+}
+
 /* Each entry's title and date are two floated 50%-width h6 elements
    (set inline per entry). At narrow widths the floated text wraps to
    several lines each, so the two columns end up overlapping instead
@@ -462,7 +487,7 @@ h6 span{ position:absolute; top:-3rem;}
 
 
 /* ===================================================================
- * # extracurriculars 
+ * # extracurriculars
  *
  * ------------------------------------------------------------------- */
 
