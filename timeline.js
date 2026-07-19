@@ -74,6 +74,21 @@
         return div.innerHTML;
     }
 
+    // Event links are authored relative to pages/projects.html. When this
+    // same timeline is rendered on the root index.html, rewrite them to
+    // point at the right place instead of duplicating EVENTS per page.
+    var onProjectsPage = window.location.pathname.indexOf('/pages/') !== -1;
+    function resolveHref(href) {
+        if (onProjectsPage) return href;
+        if (href.charAt(0) === '#') return 'pages/projects.html' + href;
+        if (href.indexOf('./') === 0) return 'pages/' + href.slice(2);
+        if (href.indexOf('../') === 0) {
+            var hashIdx = href.indexOf('#');
+            return hashIdx !== -1 ? href.slice(hashIdx) : '';
+        }
+        return href;
+    }
+
     function renderTimeline(root) {
         var today = new Date();
         var minMonth = EVENTS.reduce(function (min, e) {
@@ -167,7 +182,7 @@
                 html += '<p class="timeline-detail-desc">' + escapeHTML(evt.description) + '</p>';
             }
             if (evt.link) {
-                html += '<a class="timeline-detail-link" href="' + evt.link.href + '">' + escapeHTML(evt.link.text || 'Learn more') + '</a>';
+                html += '<a class="timeline-detail-link" href="' + resolveHref(evt.link.href) + '">' + escapeHTML(evt.link.text || 'Learn more') + '</a>';
             }
             detail.innerHTML = html;
         }
