@@ -150,7 +150,7 @@
               <a href="Linting2.docx"> Blog 2</a>
           </li>
 
-          <div class="row">
+          <div class="row" id="resume-toggle-row">
             <center>
               <button type="button" id="resume-toggle-btn" class="resume-toggle-btn" aria-expanded="false" aria-controls="resume-additional" onclick="toggleAdditionalExperience()">See Additional Experience</button>
             </center>
@@ -205,9 +205,16 @@
       <script>
         function toggleAdditionalExperience() {
           var section = document.getElementById('resume-additional');
+          var row = document.getElementById('resume-toggle-row');
           var btn = document.getElementById('resume-toggle-btn');
           var expanded = section.style.display !== 'none';
-          section.style.display = expanded ? 'none' : 'block';
+          if (expanded) {
+            section.style.display = 'none';
+            section.parentNode.insertBefore(row, section);
+          } else {
+            section.style.display = 'block';
+            section.parentNode.insertBefore(row, section.nextSibling);
+          }
           btn.setAttribute('aria-expanded', String(!expanded));
           btn.textContent = expanded ? 'See Additional Experience' : 'Show Less';
         }
