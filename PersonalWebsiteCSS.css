@@ -513,15 +513,65 @@ html.dark-mode .resume-toggle-btn:hover, html.dark-mode .resume-toggle-btn:focus
     background-color: #A8DBDB;
 }
 
-/* Each entry's title and date are two floated 50%-width h6 elements
-   (set inline per entry). At narrow widths the floated text wraps to
-   several lines each, so the two columns end up overlapping instead
-   of clearing each other -- stack them into one full-width column. */
+.resume-timeline {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.resume-timeline::before {
+    content: '';
+    position: absolute;
+    top: .3rem;
+    bottom: .3rem;
+    left: 6rem;
+    width: 2px;
+    background: rgba(1, 5, 7, 0.25);
+}
+
+html.dark-mode .resume-timeline::before {
+    background: rgba(168, 219, 219, 0.35);
+}
+
+.resume-entry {
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    column-gap: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.resume-date {
+    min-width: 0;
+    text-align: right;
+    font-weight: 600;
+    padding-top: .2rem;
+    white-space: normal;
+}
+
+.resume-content {
+    min-width: 0;
+}
+
+.resume-content h6 {
+    margin-top: 0;
+}
+
+.resume-location {
+    margin: -.5rem 0 .5rem;
+    font-style: italic;
+}
+
 @media screen and (max-width: 600px) {
-    .s-resume h6 {
-        float: none !important;
-        width: 100% !important;
-        text-align: left !important;
+    .resume-timeline::before {
+        display: none;
+    }
+
+    .resume-entry {
+        grid-template-columns: 1fr;
+        row-gap: .25rem;
+    }
+
+    .resume-date {
+        text-align: left;
     }
 }
 
