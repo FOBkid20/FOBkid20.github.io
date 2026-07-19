@@ -525,6 +525,58 @@ html.dark-mode .resume-toggle-btn:hover, html.dark-mode .resume-toggle-btn:focus
     }
 }
 
+.project-tiles {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 2rem auto;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 140px;
+    color: #111133;
+    text-decoration: none;
+    transition: transform .2s ease;
+}
+
+.project-tile:hover, .project-tile:focus {
+    transform: translateY(-4px);
+    color: #111133;
+}
+
+.project-tile img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+}
+
+.project-tile span {
+    margin-top: .6rem;
+    text-align: center;
+    font-size: .9rem;
+    line-height: 1.3rem;
+}
+
+html.dark-mode .project-tile {
+    color: #A8DBDB;
+}
+
+html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
+    color: #A8DBDB;
+}
+
+@media screen and (max-width: 600px) {
+    .project-tiles {
+        justify-content: center;
+    }
+}
+
 
 /* ===================================================================
  * # extracurriculars
