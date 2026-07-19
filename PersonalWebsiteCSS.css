@@ -291,7 +291,7 @@ h6 span{ position:absolute; top:-3rem;}
     padding-right: 30vh;   Leave room for aboutMe-social 
     padding-bottom: 20vh;*/
 
-    padding-left: 30vh;
+    padding-left: max(30vh, 230px);
     padding-right: 25px;  /* Leave room for aboutMe-social */
     padding-bottom: 20vh;
 }
@@ -303,8 +303,10 @@ h6 span{ position:absolute; top:-3rem;}
     font-family: "quattrocento", sans-serif;
     list-style: none;
     margin: 0;
+    padding: 0;
     position: absolute;
-    top: 50%;/*
+    top: 50%;
+    width: 200px;/*
     right: 5.4rem;
     -webkit-transform: translate3d(0, -50%, 0);
     -ms-transform: translate3d(0, -50%, 0);
@@ -315,66 +317,105 @@ h6 span{ position:absolute; top:-3rem;}
     transform: translate3d(0, -50%, 0);
 }
 
+.aboutMe-social > img,
+.aboutMe-social > figure {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.aboutMe-social figcaption {
+    color: #4a5a7a;  /* Lighter than body navy, still >4.5:1 on the section's light background */
+    margin-top: .25rem;
+}
+
+html.dark-mode .aboutMe-social figcaption {
+    color: #6f9999;  /* Darker than the dark-mode body text (#A8DBDB), still readable on the dark background */
+}
+
+.aboutMe-social-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 1rem;
+    position: relative;  /* Containing block for the shared hover label below */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+}
+
 .aboutMe-social a {
-    color: white;
+    color: #4a5a7a;  /* Match the Havana photo caption color */
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
-.aboutMe-social li {
-    position: relative;
-    padding: .9rem 0;
+html.dark-mode .aboutMe-social a {
+    color: #6f9999;
 }
 
-.aboutMe-social li a {
+.aboutMe-social-icons li {
+    padding: 0;
+}
+
+.aboutMe-social-icons li a {
     display: block;
     width: 33px;
     height: 33px;
 }
 
-.aboutMe-social i, .aboutMe-social span {
-    /*position: absolute;*/
-    top: 0;
+.aboutMe-social-icons i, .aboutMe-social-icons span {
     line-height: 33px;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
-.aboutMe-social i {
+.aboutMe-social-icons i {
     font-size: 14px;
-    right: 0;
     text-align: center;
     display: inline-block;
     width: 33px;
     height: 33px;
     line-height: calc(33px - 4px);
-    border: 2px solid #FFFFFF;
+    border: 2px solid #4a5a7a;  /* Match the Havana photo caption color */
     border-radius: 50%;
 }
 
-.aboutMe-social span {
-    position:absolute;
-    color: #FFFFFF;
-    left: 3rem;
-    top: 16.5px;
-    font-size: 1.4rem;
-    font-family: "quattrocento", sans-serif;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
-    transform: scale(0);
-    -webkit-transform-origin: 100% 50%;
-    -ms-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
+html.dark-mode .aboutMe-social-icons i {
+    border-color: #6f9999;
 }
 
-.aboutMe-social li:hover span {
+/* Positioned against .aboutMe-social-icons (the row), not the individual
+   <li>, so the label always appears centered below the whole row instead
+   of next to whichever icon is hovered. */
+.aboutMe-social-icons span {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-top: .6rem;
+    color: #4a5a7a;  /* Dark enough to read on the section's light background */
+    font-size: 1.1rem;
+    font-family: "quattrocento", sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate(-50%, 0) scale(0);
+    -ms-transform: translate(-50%, 0) scale(0);
+    transform: translate(-50%, 0) scale(0);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+html.dark-mode .aboutMe-social-icons span {
+    color: #6f9999;
+}
+
+.aboutMe-social-icons li:hover span {
     opacity: 1;
     visibility: visible;
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translate(-50%, 0) scale(1);
+    -ms-transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 0) scale(1);
 }
 
 /* Below the nav breakpoint, the photo/social column no longer has room
@@ -391,6 +432,7 @@ h6 span{ position:absolute; top:-3rem;}
     .aboutMe-social {
         position: static;
         top: auto;
+        width: auto;
         -webkit-transform: none;
         -ms-transform: none;
         transform: none;
@@ -406,10 +448,8 @@ h6 span{ position:absolute; top:-3rem;}
         margin: 0 auto 1rem;
     }
 
-    .aboutMe-social li {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 .625rem;
+    .aboutMe-social-icons {
+        flex-wrap: wrap;
     }
 }
 
