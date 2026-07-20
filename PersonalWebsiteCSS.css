@@ -58,13 +58,14 @@ p {
     padding-bottom: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6, 
+h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "quattrocento", garamond;
     color: #FFFFFF;
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
+    line-height: 1.2;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6  {
