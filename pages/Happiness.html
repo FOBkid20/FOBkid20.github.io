@@ -24,6 +24,10 @@
       <div class = "main-nav">
         <button id="nav-toggle" class="nav-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav-menu">☰</button>
         <ul id="main-nav-menu">
+          <li class="nav-search-item">
+            <input type="search" id="site-search" placeholder="Search..." aria-label="Search site" autocomplete="off">
+            <div id="search-results" class="search-results" hidden></div>
+          </li>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../index.html#aboutMe">About Me</a></li>
           <li><a href="../index.html#resume">Resume</a></li>
@@ -45,12 +49,12 @@
         <div>
           <p>Over my time in Happiness Club, I have participated in and/or organized nearly a hundred different events and campaigns! That's insane! I began on Smile Senate, our junior executive board, my freshman year, and moved on to become co-President, Laudation Chair, and Secretary. Below is a sample of some of my favorite events.</p>
 
-          <h6>PowerPoint Party</h6>
+          <h6><span id="happy-powerpointparty"></span>PowerPoint Party</h6>
           <p>Fall 2020<br>
           For this remote, synchronous event, participants were encouraged to make a ~5 minute powerpoint on anything of their choosing to share with the world. Behold a screenshot from my contribution: a How To Draw a Disproportional Horse Tutorial. </p>
           <img src="../images/HorsePpt.png" alt="A crudely drawn rainbow horse" height="200px">
 
-          <h6>Pet Costume Contest</h6>
+          <h6><span id="happy-petcostume"></span>Pet Costume Contest</h6>
           <p>Fall 2020<br>
           For this remote, asynchronous event, people submitted pictures of their pets in Halloween costumes. Then, we created a bracket where people could vote via our Facebook or Instagram! Our winner (Earl the Taco), Runner-Up (Jack-Jack the Beanie Baby), and other favorites (Juneau the Dino, Chip the Hot Dog, Moose the Ringleader, and Nugget the Shark)</p>
           <img src="../images/Happiness_Earl.jpg" alt="A hamster dressed as a taco" height="200px">
@@ -60,7 +64,7 @@
           <img src="../images/Happiness_Moose.jpg" alt="A dog dressed as a ringleader, with a bowler hat" height="200px">
           <img src="../images/Happiness_Nugget.jpg" alt="A black cat wearing a shark hood" height="200px">
 
-          <h6>Pie A Professor</h6>
+          <h6><span id="happy-pieaprof"></span>Pie A Professor</h6>
           <p>Winter 2018<br>
           For this Pi Day event, we recruited a half dozen professors willing to be pied in the face! We provided whipped cream for the pie-ing, as well as real pie for eating!</p>
           <img src="../images/pieAProf.jpeg" alt="A girl pies a man in the face. Two other men in the background have whipped cream on their faces." height="200px">
@@ -74,5 +78,7 @@
         </div>
       </section>
 
+      <script src="../search-index.js"></script>
+      <script src="../search.js"></script>
    </body>
    </html>

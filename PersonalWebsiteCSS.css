@@ -242,6 +242,99 @@ h6 span{ position:absolute; top:-3rem;}
     font-size: 0.95rem;
     text-align: left;
   }
+
+  .nav-search-item {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  #site-search {
+    width: 100%;
+  }
+
+  .search-results {
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.nav-search-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+#site-search {
+    font-family: "quattrocento", garamond;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    width: 140px;
+}
+
+#site-search::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 12px;
+    width: 320px;
+    max-width: calc(100vw - 24px);
+    background-color: #111133;
+    color: #FFFFFF;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 6000;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: inherit;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 10px 14px;
+    cursor: pointer;
+    font-family: "quattrocento", garamond;
+}
+
+.search-result-item:last-child {
+    border-bottom: none;
+}
+
+.search-result-item:hover, .search-result-item:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.search-result-title {
+    font-weight: bold;
+}
+
+.search-result-section {
+    font-size: 0.75rem;
+    color: #DBFDFD;
+}
+
+.search-result-excerpt {
+    font-size: 0.85rem;
+    margin-top: 2px;
+}
+
+.search-result-empty {
+    padding: 10px 14px;
+    font-size: 0.85rem;
 }
 
 /* ===================================================================
@@ -669,6 +762,48 @@ html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
     }
 }
 
+#tag-filter-section {
+    background-color: #DBFDFD; /* matches .s-resume/.s-projects section overlay color */
+    padding-top: 1.5rem;
+}
+
+#tag-filter-hint {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0 25px 1rem;
+    font-size: .9rem;
+    text-align: center;
+    color: #4a5a7a;
+}
+
+#tag-filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+    padding: 0 25px 2rem;
+}
+
+.tag-chip {
+    font-family: "quattrocento", garamond;
+    background-color: transparent;
+    border: 1px solid #111133;
+    border-radius: 999px;
+    color: #111133;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.tag-chip.is-active {
+    background-color: #111133;
+    color: #FFFFFF;
+}
+
+.project-entry.is-filtered-out {
+    display: none;
+}
+
 
 /* ===================================================================
  * # extracurriculars
@@ -1063,6 +1198,43 @@ html.dark-mode .theme-toggle-btn:hover, html.dark-mode .theme-toggle-btn:focus {
     color: #FFFFFF;
 }
 
+html.dark-mode #site-search {
+    border-color: rgba(168, 219, 219, 0.5);
+    color: #A8DBDB;
+}
+
+html.dark-mode #site-search::placeholder {
+    color: rgba(168, 219, 219, 0.6);
+}
+
+html.dark-mode .search-results {
+    background-color: #000000;
+    color: #A8DBDB;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+html.dark-mode .search-result-item {
+    border-bottom-color: rgba(168, 219, 219, 0.15);
+}
+
+html.dark-mode .search-result-item:hover, html.dark-mode .search-result-item:focus {
+    background-color: rgba(168, 219, 219, 0.08);
+}
+
+html.dark-mode .search-result-section {
+    color: #6f9999;
+}
+
+html.dark-mode .tag-chip {
+    border-color: #A8DBDB;
+    color: #A8DBDB;
+}
+
+html.dark-mode .tag-chip.is-active {
+    background-color: #A8DBDB;
+    color: #000000;
+}
+
 html.dark-mode .s-home, html.dark-mode .s-resume, html.dark-mode .s-projects {
     color: #A8DBDB;
 }
@@ -1081,6 +1253,14 @@ html.dark-mode .s-resume .overlay,
 html.dark-mode .s-extracurriculars .overlay,
 html.dark-mode .s-projects .overlay {
     background-color: #151515;
+}
+
+html.dark-mode #tag-filter-section {
+    background-color: #151515;
+}
+
+html.dark-mode #tag-filter-hint {
+    color: #6f9999;
 }
 
 html.dark-mode .timeline-scroll,
