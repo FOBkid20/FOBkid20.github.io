@@ -409,68 +409,138 @@ h6 span{ position:absolute; top:-3rem;}
     z-index: -1;
 }
 
-/* ------------------------------------------------------------------- 
+/* -------------------------------------------------------------------
  * ## aboutMe content
+ *
+ * Desktop: a 2-column CSS grid. Left column (~65%) is the name header
+ * and bio copy; right column (~35%) is a sidebar that stacks the photo
+ * card directly above the Havana card (a flex column with a small
+ * fixed gap, so the two sit back-to-back regardless of how tall the
+ * bio text ends up). `.aboutMe-sidebar` is `display: contents` below
+ * the nav breakpoint so its two children rejoin the mobile stacking
+ * order as plain siblings, each with an explicit `order` matching the
+ * desired mobile sequence (name, photo card, bio, Havana card).
  * ------------------------------------------------------------------- */
 .aboutMe-content {
     width: 100%;
-    /*height: 100%;
-    vertical-align: middle;*/
-    padding-bottom: 0rem;
+    max-width: 1100px;
+    margin: 0 auto;
     position: relative;
+    padding: 4rem 25px 5rem;
+    display: grid;
+    grid-template-columns: minmax(0, 65fr) minmax(240px, 35fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 3rem;
+    row-gap: 0;
+    grid-template-areas:
+        "name  ."
+        "main  sidebar";
 }
 
-.aboutMe-content__main {
-    position: relative;/*
-    padding-left: 25px;
-    padding-right: 30vh;   Leave room for aboutMe-social 
-    padding-bottom: 20vh;*/
-
-    padding-left: max(30vh, 230px);
-    padding-right: 25px;  /* Leave room for aboutMe-social */
-    padding-bottom: 20vh;
+.aboutMe-name {
+    grid-area: name;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 0;
 }
 
-/* ------------------------------------------------------------------- 
- * ## aboutMe social 
+.aboutMe-main {
+    grid-area: main;
+    max-width: 70ch;  /* keep line length comfortable even if the column is wider */
+}
+
+.aboutMe-main p {
+    text-align: left;
+}
+
+/* -------------------------------------------------------------------
+ * ## aboutMe sidebar (photo card + Havana card)
  * ------------------------------------------------------------------- */
-.aboutMe-social {
+.aboutMe-sidebar {
+    grid-area: sidebar;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.aboutMe-photo-card {
     font-family: "quattrocento", sans-serif;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    width: 200px;/*
-    right: 5.4rem;
-    -webkit-transform: translate3d(0, -50%, 0);
-    -ms-transform: translate3d(0, -50%, 0);
-    transform: translate3d(0, -50%, 0);*/
-
-    -webkit-transform: translate3d(0, -50%, 0);
-    -ms-transform: translate3d(0, -50%, 0);
-    transform: translate3d(0, -50%, 0);
+    background: rgba(255, 255, 255, 0.32);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(17, 17, 51, 0.16);
+    padding: 1.75rem 1.5rem;
+    text-align: center;
 }
 
-.aboutMe-social > img,
-.aboutMe-social > figure {
+html.dark-mode .aboutMe-photo-card {
+    background: rgba(30, 41, 59, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.aboutMe-headshot {
     display: block;
-    margin: 0 auto 1rem;
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 1.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 20%;
 }
 
-.aboutMe-social figcaption {
+.aboutMe-havana {
+    font-family: "quattrocento", sans-serif;
+    background: rgba(255, 255, 255, 0.32);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(17, 17, 51, 0.16);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+}
+
+html.dark-mode .aboutMe-havana {
+    background: rgba(30, 41, 59, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.aboutMe-havana-photo {
+    display: block;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto .75rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+html.dark-mode .aboutMe-havana-photo {
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+.aboutMe-havana-caption {
+    display: block;
     color: #4a5a7a;  /* Lighter than body navy, still >4.5:1 on the section's light background */
-    margin-top: .25rem;
+    font-size: .95rem;
 }
 
-html.dark-mode .aboutMe-social figcaption {
+html.dark-mode .aboutMe-havana-caption {
     color: #6f9999;  /* Darker than the dark-mode body text (#A8DBDB), still readable on the dark background */
 }
 
 .aboutMe-social-icons {
     list-style: none;
     padding: 0;
-    margin: 0 auto 1rem;
+    margin: 0 auto;
     position: relative;  /* Containing block for the shared hover label below */
     display: flex;
     justify-content: center;
@@ -478,13 +548,13 @@ html.dark-mode .aboutMe-social figcaption {
     gap: .75rem;
 }
 
-.aboutMe-social a {
+.aboutMe-social-icons a {
     color: #4a5a7a;  /* Match the Havana photo caption color */
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
-html.dark-mode .aboutMe-social a {
+html.dark-mode .aboutMe-social-icons a {
     color: #6f9999;
 }
 
@@ -517,6 +587,18 @@ html.dark-mode .aboutMe-social a {
 
 html.dark-mode .aboutMe-social-icons i {
     border-color: #6f9999;
+}
+
+.aboutMe-social-icons li:hover i,
+.aboutMe-social-icons li a:focus i {
+    border-color: #006D77;
+    color: #006D77;
+}
+
+html.dark-mode .aboutMe-social-icons li:hover i,
+html.dark-mode .aboutMe-social-icons li a:focus i {
+    border-color: #55bbcc;
+    color: #55bbcc;
 }
 
 /* Positioned against .aboutMe-social-icons (the row), not the individual
@@ -553,34 +635,53 @@ html.dark-mode .aboutMe-social-icons span {
     transform: translate(-50%, 0) scale(1);
 }
 
-/* Below the nav breakpoint, the photo/social column no longer has room
-   beside the bio text -- stack the photo above the text, and the
-   social icons in a centered row below the photo, instead of leaving
-   the reserved 30vh column squeezing the paragraph into a sliver. */
+/* Below the nav breakpoint, collapse the grid into a single centered
+   column. Source order already matches the desired mobile stacking
+   order (name, photo card, bio, Havana card), so no reordering is
+   needed here. */
 @media screen and (max-width: 600px) {
-    .aboutMe-content__main {
-        padding-left: 25px;
-        padding-right: 25px;
-        padding-bottom: 2rem;
+    .aboutMe-content {
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;
+        padding: 2.5rem 25px 2rem;
     }
 
-    .aboutMe-social {
-        position: static;
-        top: auto;
-        width: auto;
-        -webkit-transform: none;
-        -ms-transform: none;
-        transform: none;
+    .aboutMe-name {
+        order: 1;
         text-align: center;
-        padding: 0 25px 2rem;
     }
 
-    .aboutMe-social > img {
-        display: block;
-        width: auto;
-        height: auto;
-        max-width: 200px;
-        margin: 0 auto 1rem;
+    /* Dissolve the sidebar wrapper so the photo card and Havana card
+       rejoin aboutMe-content as direct flex children -- each can then
+       take its own `order` to land in the desired mobile sequence
+       (name, photo card, bio, Havana card) instead of staying stacked
+       back-to-back the way they are in the desktop sidebar. */
+    .aboutMe-sidebar {
+        display: contents;
+    }
+
+    .aboutMe-photo-card {
+        order: 2;
+        max-width: 280px;
+        margin: 1.5rem auto;
+    }
+
+    .aboutMe-main {
+        order: 3;
+        max-width: none;
+        margin: 0 auto;
+        padding-bottom: 1rem;
+    }
+
+    .aboutMe-main p {
+        text-align: left;
+    }
+
+    .aboutMe-havana {
+        order: 4;
+        max-width: 280px;
+        margin: 1.5rem auto 0;
     }
 
     .aboutMe-social-icons {
