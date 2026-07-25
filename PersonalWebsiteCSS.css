@@ -913,6 +913,32 @@ html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
 .timeline-legend-item {
     display: inline-flex;
     align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity .12s ease;
+}
+
+.timeline-legend-item:hover, .timeline-legend-item:focus {
+    opacity: .75;
+}
+
+.timeline-legend-item.is-off {
+    opacity: .4;
+}
+
+.timeline-legend-item.is-off .timeline-legend-dot {
+    background-color: transparent !important;
+    border: 1.5px solid currentColor;
+}
+
+.timeline-marker.is-hidden, .timeline-bar.is-hidden {
+    display: none;
 }
 
 .timeline-legend-dot {
@@ -1055,7 +1081,7 @@ html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
 
 .timeline-marker.timeline-cat-career, .timeline-bar.timeline-cat-career,
 .timeline-legend-item.timeline-cat-career .timeline-legend-dot {
-    background-color: #D1495B;
+    background-color: #C7234F;
 }
 
 .timeline-marker.timeline-cat-education, .timeline-bar.timeline-cat-education,
@@ -1075,7 +1101,7 @@ html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
 
 .timeline-marker.timeline-cat-clubs, .timeline-bar.timeline-cat-clubs,
 .timeline-legend-item.timeline-cat-clubs .timeline-legend-dot {
-    background-color: #E0A458;
+    background-color: #DDB940;
 }
 
 .timeline-marker.timeline-cat-other, .timeline-bar.timeline-cat-other,
@@ -1083,11 +1109,16 @@ html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
     background-color: #8D99AE;
 }
 
+.timeline-marker.timeline-cat-shows, .timeline-bar.timeline-cat-shows,
+.timeline-legend-item.timeline-cat-shows .timeline-legend-dot {
+    background-color: #DB6300;
+}
+
 /* Tooltip backgrounds are intentionally not overridden in dark mode --
    deepened so white tooltip text stays readable (WCAG AA) regardless
    of theme, rather than trying to retune per theme. */
 .timeline-marker.timeline-cat-career::after {
-    background-color: #B3364A;
+    background-color: #9F1C3F;
 }
 
 .timeline-marker.timeline-cat-education::after {
@@ -1108,6 +1139,10 @@ html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
 
 .timeline-marker.timeline-cat-other::after {
     background-color: #5A6478;
+}
+
+.timeline-marker.timeline-cat-shows::after {
+    background-color: #A44A00;
 }
 
 @media screen and (max-width: 600px) {
@@ -1274,7 +1309,7 @@ html.dark-mode .timeline-marker {
 
 html.dark-mode .timeline-marker.timeline-cat-career, html.dark-mode .timeline-bar.timeline-cat-career,
 html.dark-mode .timeline-legend-item.timeline-cat-career .timeline-legend-dot {
-    background-color: #FF6B81;
+    background-color: #F7648B;
 }
 
 html.dark-mode .timeline-marker.timeline-cat-education, html.dark-mode .timeline-bar.timeline-cat-education,
@@ -1294,12 +1329,17 @@ html.dark-mode .timeline-legend-item.timeline-cat-projects .timeline-legend-dot 
 
 html.dark-mode .timeline-marker.timeline-cat-clubs, html.dark-mode .timeline-bar.timeline-cat-clubs,
 html.dark-mode .timeline-legend-item.timeline-cat-clubs .timeline-legend-dot {
-    background-color: #F4C27A;
+    background-color: #EDD482;
 }
 
 html.dark-mode .timeline-marker.timeline-cat-other, html.dark-mode .timeline-bar.timeline-cat-other,
 html.dark-mode .timeline-legend-item.timeline-cat-other .timeline-legend-dot {
     background-color: #B8C4D9;
+}
+
+html.dark-mode .timeline-marker.timeline-cat-shows, html.dark-mode .timeline-bar.timeline-cat-shows,
+html.dark-mode .timeline-legend-item.timeline-cat-shows .timeline-legend-dot {
+    background-color: #FF8929;
 }
 
 /*# sourceMappingURL=main.css.map */
