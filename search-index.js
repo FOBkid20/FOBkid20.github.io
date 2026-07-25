@@ -22,6 +22,17 @@ var SEARCH_INDEX = [
     { id: 'job-wheelock', title: 'Wheelock Family Theatre — Assistant', page: 'index.html', anchor: 'job-wheelock', section: 'resume', excerpt: 'Supervised and instructed children at a theater summer camp (Summer 2016).' },
     { id: 'job-pac', title: 'The Performing Arts Connection — Counselor, Assistant Instructor', page: 'index.html', anchor: 'job-pac', section: 'resume', excerpt: 'Led activities and taught a Musical Theater class for grades K-4 (Jun 2012 – Jun 2016).' },
 
+    // Certifications
+    { id: 'cert-rtc-summer', title: 'Rewrite AI Summer Challenge', page: 'index.html', anchor: 'cert-rtc-summer', section: 'certifications', excerpt: "Rewriting the Code, credentialed via IBM's \"Build an AI Agent\" (Jul 2026)." },
+    { id: 'cert-figjam', title: 'FigJam for Non-designers', page: 'index.html', anchor: 'cert-figjam', section: 'certifications', excerpt: 'LinkedIn Learning (Nov 2025).' },
+    { id: 'cert-figma-essential', title: 'Figma Essential Training', page: 'index.html', anchor: 'cert-figma-essential', section: 'certifications', excerpt: 'LinkedIn Learning (Nov 2025).' },
+    { id: 'cert-figma-autolayout', title: 'Figma: Using Auto Layout', page: 'index.html', anchor: 'cert-figma-autolayout', section: 'certifications', excerpt: 'LinkedIn Learning (Oct 2025).' },
+    { id: 'cert-responsible-ai', title: 'Foundations of Responsible AI', page: 'index.html', anchor: 'cert-responsible-ai', section: 'certifications', excerpt: 'LinkedIn Learning (Mar 2025).' },
+    { id: 'cert-genai-pm', title: 'Generative AI Overview for Project Managers', page: 'index.html', anchor: 'cert-genai-pm', section: 'certifications', excerpt: 'Project Management Institute (Apr 2024).' },
+    { id: 'cert-pac', title: 'Product Analytics Micro-Certification (PAC)', page: 'index.html', anchor: 'cert-pac', section: 'certifications', excerpt: 'Product School, credential ID cert_qnv3vffp (Jan 2024).' },
+    { id: 'cert-safe-agilist', title: 'Certified SAFe® 6 Agilist', page: 'index.html', anchor: 'cert-safe-agilist', section: 'certifications', excerpt: 'Scaled Agile, Inc. (Nov 2023, expired Nov 2024).' },
+    { id: 'cert-pspo', title: 'Professional Scrum Product Owner™ I (PSPO I)', page: 'index.html', anchor: 'cert-pspo', section: 'certifications', excerpt: 'Scrum.org (Feb 2022).' },
+
     // Extracurriculars
     { id: 'ec-contra', title: 'Contra Dancing', page: 'index.html', anchor: 'ec-contra', section: 'extracurriculars', excerpt: "Regularly volunteers for New York City's CDNY and BKC contra dances." },
     { id: 'ec-theatre', title: 'Attending Theatre', page: 'index.html', anchor: 'ec-theatre', section: 'extracurriculars', excerpt: 'Sees most Broadway shows plus Off- and Off-Off-Broadway productions.' },
@@ -94,6 +105,7 @@ var SEARCH_INDEX = [
 var SEARCH_SECTION_LABELS = {
     about: 'About',
     resume: 'Resume',
+    certifications: 'Certifications',
     extracurriculars: 'Extracurriculars',
     happiness: 'Happiness Club',
     'projects-cs': 'Projects — Computer Science',
