@@ -863,6 +863,19 @@ html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
     }
 }
 
+/* Inline write-up photos/videos (Seesaw graphics, needlefelting, Happiness
+   Club pics, etc.) are legacy <img height="200px"> tags with no width cap,
+   so a wide-aspect image renders wider than a phone's viewport. Cap them to
+   the column width and let height scale to match instead of overflowing. */
+img[height], video[height] {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+    margin: 1rem auto;
+}
+
 #tag-filter-section {
     background-color: #DBFDFD; /* matches .s-resume/.s-projects section overlay color */
     padding-top: 1.5rem;
