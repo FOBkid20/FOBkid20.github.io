@@ -1,12 +1,12 @@
 (function () {
     var MAX_RESULTS = 8;
 
-    // Mirrors timeline.js's onProjectsPage/resolveHref idea, generalized to
-    // the site's 3 known pages instead of just root vs. /pages/.
+    // Mirrors timeline.js's currentPage()/resolveHref() pattern.
     function currentPage() {
         var path = window.location.pathname;
-        if (/\/pages\/projects\.html$/.test(path)) return 'pages/projects.html';
         if (/\/pages\/Happiness\.html$/.test(path)) return 'pages/Happiness.html';
+        if (/\/pages\/professional\.html$/.test(path)) return 'pages/professional.html';
+        if (/\/pages\/personal\.html$/.test(path)) return 'pages/personal.html';
         return 'index.html';
     }
 
@@ -158,8 +158,9 @@
         var bar = document.getElementById('tag-filter-bar');
         if (!bar || typeof SEARCH_INDEX === 'undefined') return;
 
+        var current = currentPage();
         var projectEntries = SEARCH_INDEX.filter(function (e) {
-            return e.tags && e.section.indexOf('projects-') === 0;
+            return e.tags && e.section.indexOf('projects-') === 0 && e.page === current;
         });
 
         var tagSet = [];
@@ -205,12 +206,23 @@
         });
     }
 
+    // Each hub page now owns its own slice of project-entry content, so the
+    // drift check compares the current page's DOM count against only the
+    // SEARCH_INDEX entries whose `page` matches it.
+    var PROJECT_SECTION_SELECTORS = {
+        'pages/professional.html': '#technicalProjects .project-entry',
+        'pages/personal.html': '#performing .project-entry, #crafts .project-entry, #writingEditing .project-entry, #lifeTravel .project-entry'
+    };
+
     function checkIndexDrift() {
-        var projectSections = document.querySelectorAll('#computerScience .project-entry, #performing .project-entry, #other .project-entry');
-        if (!projectSections.length || typeof SEARCH_INDEX === 'undefined') return;
-        var indexed = SEARCH_INDEX.filter(function (e) { return e.section.indexOf('projects-') === 0; }).length;
+        var current = currentPage();
+        var selector = PROJECT_SECTION_SELECTORS[current];
+        if (!selector || typeof SEARCH_INDEX === 'undefined') return;
+        var projectSections = document.querySelectorAll(selector);
+        if (!projectSections.length) return;
+        var indexed = SEARCH_INDEX.filter(function (e) { return e.section.indexOf('projects-') === 0 && e.page === current; }).length;
         if (indexed !== projectSections.length) {
-            console.warn('search-index.js may be out of sync with pages/projects.html: ' + projectSections.length + ' project entries in the DOM, ' + indexed + ' in SEARCH_INDEX.');
+            console.warn('search-index.js may be out of sync with ' + current + ': ' + projectSections.length + ' project entries in the DOM, ' + indexed + ' in SEARCH_INDEX.');
         }
     }
 

@@ -30,10 +30,26 @@
               <div id="search-results" class="search-results" hidden></div>
             </li>
             <li><a href="#home">Home</a></li>
-            <li><a href="#aboutMe">About Me</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#extracurriculars">Extracurriculars</a></li>
-            <li><a href="./pages/projects.html">Projects</a></li>
+            <li class="nav-dropdown">
+              <a href="./pages/professional.html">Professional</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="./pages/professional.html#resume">Resume</a></li>
+                <li><a href="./pages/professional.html#leadership">Leadership &amp; Communication</a></li>
+                <li><a href="./pages/professional.html#technicalProjects">Technical Projects</a></li>
+                <li><a href="./pages/professional.html#timeline">Timeline</a></li>
+              </ul>
+            </li>
+            <li class="nav-dropdown">
+              <a href="./pages/personal.html">Personal</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="./pages/personal.html#jobs-community">Jobs &amp; Community</a></li>
+                <li><a href="./pages/personal.html#performing">Performing</a></li>
+                <li><a href="./pages/personal.html#crafts">Crafts</a></li>
+                <li><a href="./pages/personal.html#writingEditing">Writing &amp; Editing</a></li>
+                <li><a href="./pages/personal.html#lifeTravel">Life &amp; Travel</a></li>
+                <li><a href="./pages/personal.html#timeline">Timeline</a></li>
+              </ul>
+            </li>
             <li><button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">🌙</button></li>
           </ul>
         </nav>
@@ -88,407 +104,48 @@
         </div>
       </section>
 
-      <section id='resume' class="s-resume">
+      <section id="highlights" class="s-resume">
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
         <div class="row section-header">
-          <h2>Resume</h2>
-        </div> <!-- end section-header -->
+          <h2>Highlights</h2>
+        </div>
 
         <div>
-          <h4 align="center"> Education</h4>
-          <div class="resume-timeline">
-            <div class="resume-entry">
-              <div class="resume-date">Sep&nbsp;2017 – Jun&nbsp;2021</div>
-              <div class="resume-content">
-                <h6><span id="edu-northwestern"></span>Northwestern University</h6>
-                <ul>
-                  <li> Computer Science Major and Linguistics Major.&emsp;&emsp; Dean's List.&emsp;&emsp; 3.7 GPA.</li>
-                  <li> Selected Courses: Natural Language Processing, Linear Algebra and Multivariable Calculus, Data Structures and Algorithms, Intro to Artificial Intelligence, Machine Learning, Data Science, Object-Oriented Programming in C++, Semantics, Syntax, Phonetics & Phonology, Sociolinguistics </li>
-                  <li> Semester in Paris: Fall 2019 </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-date">Aug&nbsp;2009 – Jun&nbsp;2016</div>
-              <div class="resume-content">
-                <h6><span id="edu-amsca"></span>Advanced Math and Science Academy Charter School</h6>
-                <ul>
-                  <li> 4.6 weighted GPA.&emsp;&emsp; SAT: 2380.&emsp;&emsp; National Merit Scholar.&emsp;&emsp; National AP Scholar. </li>
-                  <li> Distinguished Young Woman of Massachusetts 2016 Scholastic Award recipient. </li>
-                  <li> Writing Awards: Best of SNO, Creative Communications Poetry Contest (2-time winner), Scholastic Art and Writing Award Silver Key. </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <h4 align="center"> Work Experience</h4>
-          <div class="resume-timeline">
-            <div class="resume-entry">
-              <div class="resume-date">Jun&nbsp;2024 – Jul&nbsp;2026</div>
-              <div class="resume-content">
-                <h6><span id="job-bny-vp"></span> Bank of New York, <i>Vice President, Product Owner</i> </h6>
-                <p class="resume-location">New York City, NY</p>
-                <ul>
-                  <li> Lead product owner for production services and reporting-adjacent workflows within a $43MM client contract.</li>
-                  <li> Translated complex operational and financial requirements into structured epics and user stories; design workflow and reporting mockups in Figma, Excel, and PowerPoint used across client engagements.</li>
-                  <li> Drove continuous improvement across production incidents, change requests, data quality issues, and workflow validation—improving traceability and reducing exceptions through streamlined JIRA processes.</li>
-                  <li>Built strategic content and demo agentic model for AI-driven operational efficiency proposals, delivering visually compelling presentations to support innovation initiatives.</li>
-                  <li>Defined and implemented product-led onboarding strategies for global teams, ensuring high consistency in legacy-to-modern system migrations.</li>
-                  <li>Oversaw application migration effort, aligning engineering, QA, client stakeholders, and vendor teams across multiple environments.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-date">Aug&nbsp;2021 – Jun&nbsp;2024</div>
-              <div class="resume-content">
-                <h6><span id="job-bny-ltpm"></span> Bank of New York, <i>Lead Technology Product Manager</i> </h6>
-                <p class="resume-location">New York City, NY</p>
-                <ul>
-                  <li>Coordinated development of award-winning company intranet reaching 40,000+ employees across developers, Product Owner, and dozens of business and technical stakeholders as Project Manager and Scrum Master, leading to the release of 24 new features and bug fixes.</li>
-                  <li>Mediated cross-functional team of stakeholders across eight groups to identify and prioritize requirements and responsibilities to improve overall internal search experience via technical and process-based solutions and to roll out internal chatbot.</li>
-                  <li>Conducted user interviews, wrote user stories, managed user acceptance testing, and designed feedback surveys to understand and improve user experience. </li>
-                  <li>Articulated vision, strategy, metrics, and roadmap for diverse audiences.</li>
-                  <li> Operations lead for Women in Technology New York Chapter. </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-date">Sep&nbsp;2020 – Jun&nbsp;2021</div>
-              <div class="resume-content">
-                <h6><span id="job-nu-research"></span> Northwestern University, <i>Research Assistant</i> </h6>
-                <p class="resume-location">Evanston, IL</p>
-                <ul>
-                  <li> Predicted opioid use and high-risk behaviors based on Reddit data using machine learning models.</li>
-                  <li> Analyzed gender bias in movie reviews and scripts based on connotation frames. </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-date">Summer 2020</div>
-              <div class="resume-content">
-                <h6><span id="job-amazon"></span> Amazon, <i>Software Development Engineering Intern</i> </h6>
-                <p class="resume-location">Seattle, WA (Remote)</p>
-                <ul>
-                  <li> Owned the development of a tool enhancement with an existing Java codebase to provide more accurate and granular latency metrics for Fire TV devices from user research to design to implementation.</li>
-                  <li> Provided React frontend visualization to minimize developer time seeking root cause for latency issues.</li>
-                  <li> Led a Hackathon team in developing an Alexa Skill to aid incoming interns in pre-onboarding. </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-date">Summer 2019</div>
-              <div class="resume-content">
-                <h6><span id="job-bose"></span> Bose Corporation, <i>NLP Intern</i></h6>
-                <p class="resume-location">Framingham, MA</p>
-                <ul>
-                  <li> Created a rule-based text categorization service to identify wishlist features from unstructured review data using ElasticSearch. </li>
-                  <li> Led the design and creation of a topic aggregation service via word embeddings. </li>
-                  <li> Built and trained a machine learning aspect-based sentiment analysis tool using BERT. </li>
-                  <li> Constructed dashboards and created and led tutorials for various teams across Bose in using Kibana tools. </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-date">Summer 2018</div>
-              <div class="resume-content">
-                <h6><span id="job-lodo"></span> Lodo Therapeutics, <i>Bioinformatics Research Assistant</i></h6>
-                <p class="resume-location">New York City, NY</p>
-                <ul>
-                  <li> Independently designed and implemented packages and tools in R for data processing and visualization, employing regular expressions and Shiny, identifying over 4,500 data inconsistencies and correcting nearly 3000 </li>
-                  <li> Worked with devOps team to expand version control (git), continuous integration (Drone), and cloud storage (AWS) processes </li>
-                  <li> Conducted supervised lab work: executed PCR, restriction digest, ligation, and transformations </li>
-                  <li> See my breakdown of my work here: <a href="Linting1.docx"> Blog 1 </a> &nbsp;and here:
-                      <a href="Linting2.docx"> Blog 2</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="row" id="resume-toggle-row">
-            <center>
-              <button type="button" id="resume-toggle-btn" class="resume-toggle-btn" aria-expanded="false" aria-controls="resume-additional" onclick="toggleAdditionalExperience()">See Additional Experience</button>
-            </center>
-          </div>
-
-          <div id="resume-additional" style="display: none;">
-            <div class="resume-timeline">
-              <div class="resume-entry">
-                <div class="resume-date">Jun&nbsp;2016 – Jun&nbsp;2018</div>
-                <div class="resume-content">
-                  <h6><span id="job-kayla"></span> Kayla’s Directory, <i>Editor</i> </h6>
-                  <p class="resume-location">Burlington, VT</p>
-                  <ul>
-                    <li> Edit blog posts for Kayla’s Directory, a website created to assist special needs families in VT. </li>
-                    <li> Revise blogs for grammatical, stylistic, and linguistic errors and fluency. </li>
-                    <li> Advise about blog strategy and positioning. </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Summer 2017</div>
-                <div class="resume-content">
-                  <h6><span id="job-malingue"></span> Edouard Malingue Gallery Hong Kong, <i>Intern</i> </h6>
-                  <p class="resume-location">Hong Kong</p>
-                  <ul>
-                    <li> Maintained gallery’s digital presence by uploading and categorizing over 100 videos from Vimeo to Wordpress, updating artsy.com and similar databases, and finding Instagram partners. </li>
-                    <li> Researched artists for ‘one second ago’ exhibition press releases and researched competitors. </li>
-                    <li> Improved office efficiency by organizing calendar, press coverage, archives, and artist media digitally and physically. </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">May&nbsp;2017 – Jun&nbsp;2017</div>
-                <div class="resume-content">
-                  <h6><span id="job-dunwell"></span> Dun-Well Donuts, <i>Employee</i> </h6>
-                  <p class="resume-location">New York City, NY</p>
-                  <ul>
-                    <li> Represented Dun-Well Donuts cheerfully and effectively while independently overseeing Manhattan location. </li>
-                    <li> Managed money, cleaned, and closed shop. </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Apr&nbsp;2014 – 2016</div>
-                <div class="resume-content">
-                  <h6><span id="job-princessparty"></span> Princess Party Pals, <i>Co-Founder</i></h6>
-                  <p class="resume-location">Southborough, MA</p>
-                  <ul>
-                    <li> Conducted market research and developed a desirable service. </li>
-                    <li> Managed and performed at dozens of birthday parties and events. </li>
-                    <li> Balanced a budget and donated 20% of profits to charity. </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Summer 2016</div>
-                <div class="resume-content">
-                  <h6><span id="job-wheelock"></span> Wheelock Family Theatre, <i>Assistant</i> </h6>
-                  <p class="resume-location">Boston, MA</p>
-                  <ul>
-                    <li> Supervised and instructed children ages 4-7 at a theater summer camp. </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Jun&nbsp;2012 – Jun&nbsp;2016</div>
-                <div class="resume-content">
-                  <h6><span id="job-pac"></span> The Performing Arts Connection, <i>Counselor, Assistant Instructor</i> </h6>
-                  <p class="resume-location">Sudbury, MA</p>
-                  <ul>
-                    <li> Led activities and designed performances while counseling children grades K-2 at summer camp. </li>
-                    <li> Handled group and individual exercises and fostered a sense of community while instructing weekly grade 3-4 Musical Theater class. </li>
-                    <li> Collaborated with creatives, managed students, and organized records while assistant directing grade 8-12 Youth Musical. </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <h4 align="center"> Certifications</h4>
-          <div class="resume-timeline">
-            <div class="resume-entry">
-              <div class="resume-date">Jul&nbsp;2026</div>
-              <div class="resume-content">
-                <h6><span id="cert-rtc-summer"></span>Rewrite AI Summer Challenge</h6>
-                <p class="resume-location">Rewriting the Code · credentialed via IBM's "Build an AI Agent" · <a href="https://www.credly.com/badges/fd67f555-abc2-4c8c-adf4-a58b5cddc14e/linked_in_profile" target="_blank">View credential</a></p>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-date">Nov&nbsp;2025</div>
-              <div class="resume-content">
-                <h6><span id="cert-figjam"></span>FigJam for Non-designers</h6>
-                <p class="resume-location">LinkedIn · <a href="https://www.linkedin.com/learning/certificates/c05f0b2b1cfec3354d35da42c7ecb1be097d6baa7d0f3cb5acf292068c4fb095" target="_blank">View credential</a></p>
-              </div>
-            </div>
-
-            <div class="resume-entry">
-              <div class="resume-date">Nov&nbsp;2025</div>
-              <div class="resume-content">
-                <h6><span id="cert-figma-essential"></span>Figma Essential Training</h6>
-                <p class="resume-location">LinkedIn · <a href="https://www.linkedin.com/learning/certificates/f228a02a6139f309dcf3294d12a4f032747bccf9077938bebc6fbbe88fe7406f" target="_blank">View credential</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="row" id="cert-toggle-row">
-            <center>
-              <button type="button" id="cert-toggle-btn" class="resume-toggle-btn" aria-expanded="false" aria-controls="cert-additional" onclick="toggleAdditionalCertifications()">See Additional Certifications</button>
-            </center>
-          </div>
-
-          <div id="cert-additional" style="display: none;">
-            <div class="resume-timeline">
-              <div class="resume-entry">
-                <div class="resume-date">Oct&nbsp;2025</div>
-                <div class="resume-content">
-                  <h6><span id="cert-figma-autolayout"></span>Figma: Using Auto Layout</h6>
-                  <p class="resume-location">LinkedIn · <a href="https://www.linkedin.com/learning/certificates/9f2fa49955d70428bd843aa278b80f4aceff2df31dafc85bb37f32835ba8de8f" target="_blank">View credential</a></p>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Mar&nbsp;2025</div>
-                <div class="resume-content">
-                  <h6><span id="cert-responsible-ai"></span>Foundations of Responsible AI</h6>
-                  <p class="resume-location">LinkedIn · <a href="https://www.linkedin.com/learning/certificates/40c0f8a26df54cbda9f857a512523bcdeadad1ff1bf255ad12e024b5720f08a2" target="_blank">View credential</a></p>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Apr&nbsp;2024</div>
-                <div class="resume-content">
-                  <h6><span id="cert-genai-pm"></span>Generative AI Overview for Project Managers</h6>
-                  <p class="resume-location">Project Management Institute · <a href="https://www.credly.com/badges/e7065f8d-e2de-4e58-a0d9-3f2872a01bcd/linked_in_profile" target="_blank">View credential</a></p>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Jan&nbsp;2024</div>
-                <div class="resume-content">
-                  <h6><span id="cert-pac"></span>Product Analytics Micro-Certification (PAC)</h6>
-                  <p class="resume-location">Product School · <a href="https://drive.google.com/file/d/1Il-HKvuZMN0DLPYMbytr5H1eDWOYRra1/view" target="_blank">View credential</a> (ID cert_qnv3vffp)</p>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Nov&nbsp;2023</div>
-                <div class="resume-content">
-                  <h6><span id="cert-safe-agilist"></span>Certified SAFe® 6 Agilist</h6>
-                  <p class="resume-location">Scaled Agile, Inc. · <a href="https://www.credly.com/badges/068e3c8e-78e6-4460-8299-05e7984117b4/linked_in_profile" target="_blank">View credential</a> (expired Nov 2024)</p>
-                </div>
-              </div>
-
-              <div class="resume-entry">
-                <div class="resume-date">Feb&nbsp;2022</div>
-                <div class="resume-content">
-                  <h6><span id="cert-pspo"></span>Professional Scrum Product Owner&trade; I (PSPO I)</h6>
-                  <p class="resume-location">Scrum.org · <a href="https://www.credly.com/badges/117310f8-9a68-4da4-99c4-1c82df09db32?source=linked_in_profile" target="_blank">View credential</a></p>
-                </div>
-              </div>
-            </div>
+          <p><center>A few things I'm especially proud of, spanning both the professional and personal sides of what I do.</center></p>
+          <div class="project-tiles">
+            <a class="project-tile" href="./pages/professional.html#Bose">
+              <img src="./images/bose-logo.png" alt="Bose">
+              <span>Bose Topic Aggregation</span>
+            </a>
+            <a class="project-tile" href="./pages/professional.html#CPD">
+              <img src="./images/Invisible Institute.png" alt="Invisible Institute">
+              <span>Chicago Police Department Home Invasion Analysis</span>
+            </a>
+            <a class="project-tile" href="./pages/Happiness.html">
+              <img src="./images/HappinessClubExecPieAProf.jpeg" alt="Happiness Club Executive Board">
+              <span>Happiness Club</span>
+            </a>
+            <a class="project-tile" href="./pages/personal.html#AVMS">
+              <img src="./images/AVMS Square.webp" alt="A Very Merry Sanctuary">
+              <span>A Very Merry Sanctuary</span>
+            </a>
+            <a class="project-tile" href="./pages/personal.html#ec-contra">
+              <span>Contra Dancing</span>
+            </a>
           </div>
         </div>
       </section>
 
-      <script>
-        function toggleAdditionalExperience() {
-          var section = document.getElementById('resume-additional');
-          var row = document.getElementById('resume-toggle-row');
-          var btn = document.getElementById('resume-toggle-btn');
-          var expanded = section.style.display !== 'none';
-          if (expanded) {
-            section.style.display = 'none';
-            section.parentNode.insertBefore(row, section);
-          } else {
-            section.style.display = 'block';
-            section.parentNode.insertBefore(row, section.nextSibling);
-          }
-          btn.setAttribute('aria-expanded', String(!expanded));
-          btn.textContent = expanded ? 'See Additional Experience' : 'Show Less';
-        }
-
-        function toggleAdditionalCertifications() {
-          var section = document.getElementById('cert-additional');
-          var row = document.getElementById('cert-toggle-row');
-          var btn = document.getElementById('cert-toggle-btn');
-          var expanded = section.style.display !== 'none';
-          if (expanded) {
-            section.style.display = 'none';
-            section.parentNode.insertBefore(row, section);
-          } else {
-            section.style.display = 'block';
-            section.parentNode.insertBefore(row, section.nextSibling);
-          }
-          btn.setAttribute('aria-expanded', String(!expanded));
-          btn.textContent = expanded ? 'See Additional Certifications' : 'Show Less';
-        }
-      </script>
-
-      <section id="extracurriculars" class="s-extracurriculars" data-position-y=center>
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>    
-        <div class="extracurriculars-content">    
-          <div class="row section-header">
-            <h2 align="center">Extracurriculars</h2>
-          </div>
-          <div class="row extracurriculars-content__main">
-              <h6><span id="ec-contra"></span>Contra Dancing</h6>
-              <li> I began contra dancing in college at the Irish American Heritage Center in Chicago. </li>
-              <li> I regularly volunteer for both of New York City's two regular contra dances: Country Dance New York (CDNY) in Manhattan and Brooklyn Contra (BKC) in Brooklyn. </li>
-              <li> I have contra danced in Illinois, New York, Massachusetts, Vermont, Maryland, Pennsylvania, and California. I love attending dance weekends, both specific to contra and broader. </li>
-              <li><a href="https://www.cdny.org/" target="_blank">CDNY Website</a></li>
-              <li><a href="https://www.brooklyncontra.org/" target="_blank">BKC Website</a></li>
-              
-              <h6><span id="ec-theatre"></span>Attending Theatre</h6>
-              <li> I see most shows running on Broadway, as well as a smattering of Off- or Off-Off-Broadway shows. </li>
-              <li><a href="https://www.show-score.com/member/lexi-ryan/" target="_blank">My Show-Score Account</a></li>
-
-            <h6><span id="ec-happiness"></span>Happiness Club</h6>
-            <li> Co-Chair of Happiness Club, the first organization I joined on campus as a freshman. </li>
-            <li> Chiefly responsible for the planning and conducting of events designed to make campus a happier place, including major events such as a Welcome Bonfire, Pie a Professor, and Happiness Week, and weekly events such as movie nights and capture the flag games. Responsible for facilitating contact with our more than 1000 members via a weekly email. </li>
-            <li><a href="https://www.facebook.com/HappinessClubNU" target="_blank">Facebook</a></li>
-            <li><a href="https://www.instagram.com/happinessclubnu/?hl=en" target="_blank">Instagram</a></li>
-
-            <h6><span id="ec-seesaw"></span>Seesaw Theatre</h6>
-            <li> Director, teaching artist, cast member, and adventure guide with Seesaw Theatre, a student theatre group that devises and performs sensory theatrical performances designed for autistic and otherwise disabled children.</li>
-            <li> Executive Board Member as the Spring Director and Head Adventure Guide, where I guided other TAs in best practices for engaging our audiences. The Head Adventure Guide acts as Assistant Director for both Seesaw's seasonal stage productions. </li>
-            <li> Cast member in various Seesaw stage productions. In Winter 2018, I was a Snow Buddy in Snow Day. In Spring 2018, I was The Fawn in Wanderland. In Winter 2019, I was a Cowgirl in Rockin' Rodeo. </li>
-            <li> As a TA, I oversaw drama workshops for disabled children at local schools. </li>
-            <li><a href="http://www.seesawtheatre.org/" target="_blank">Website</a></li>
-
-            <h6><span id="ec-hackathons"></span>Hackathons</h6>
-            <li> Check out my <a href="https://github.com/FOBkid20">GitHub page</a> to see my projects! </li>
-            <li> Thought Jar (Best Beginner Hack at BuildHer 2018): designed and built an iPhone app in React Native that provides users with a daily positive thought and space to reflect.</li>
-            <li> HeartBeat (Best Design at ByteHacks 2018): designed and built a website that provides a Spotify playlist customized by users’ moods, which can be determined by facial recognition. Technologies used include HTML, CSS, JavaScript, Google Cloud Platform, Google Vision, Python, and Flask.</li>
-            <li> Intern Prep (Team Lead at Internal Amazon Hackathon 2020): designed and built an Alexa Skill with a conversational interface to provide incoming interns with a countdown to their start date and relevant tips based on how much time remains.</li>
-
-            <h6><span id="ec-devcompetition"></span>.dev Competition</h6>
-            <li> Winner: First Place</li>
-            <li> Led a team in developing an iPhone app to store and calculate users’ family relations. Worked as Project Lead and on frontend, using React Native.</li>
-
-            <h6><span id="ec-wic"></span>Women in Computing Club</h6>
-            <li> I was a member of Northwestern's WiC from September 2018 to 2021. As a senior, I mentored a freshman Computer Science major.</li>
-
-            <h6><span id="ec-tiilt"></span>Technological Innovations for Inclusive Learning & Teaching Lab</h6>
-            <li> I was a research assistant on the FamJam! making project of TIILT lab. I facilitated projects among families using technological tools like 3D pens and paper circuits and took field notes. </li>
-            <li><a href="https://tiilt.northwestern.edu/">Website</a></li>
-
-            <h6><span id="ec-smokemirrors"></span>Smoke & Mirrors Magic Club</h6>
-            <li> I was Vice President of Northwestern's magic club Smoke & Mirrors. I performed in our annual Spring magic show in both 2018 and 2019. </li>
-
-            <h6><span id="ec-chiomega"></span>Chi Omega Sorority</h6>
-            <li> I joined Chi Omega in January 2018. </li>
-
-            <h6><span id="ec-theaterperformance"></span>Theater Performance</h6>
-            <li> I have trained and performed in dance, vocal performance, and theater since the age of 5. See my former theatre resume here: <a href="TheatreResume.docx"> Resume </a>
-          </div>
-        </div>
-      </section>
-      
-      <section id='projects' class="s-projects">
+      <section id="home-timeline" class="s-projects s-timeline">
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
         <div class="row section-header">
-          <h2>Projects</h2>
-        </div> <!-- end section-header -->
+          <h2>Timeline</h2>
+        </div>
 
         <div>
-            <p>
-            Please see the Projects tab at the top of the page for a full rundown of my projects. See a summary of projects and events in the timeline below.</p>
+            <p><center>A full chronological look at school, work, performing arts, projects, and hobbies. Click any point on the timeline for details, or use the Professional and Personal nav menus above for a narrower view.</center></p>
             <div id="timeline-root"></div>
         </div>
       </section>
@@ -500,3 +157,4 @@
    </html>
 
 <!--Note to future Lexi for git: Use PAT for Git (see Bitwarden) for pushing to GitHub via command line https://docs.github.com/en/get-started/getting-started-with-git/updating-credentials-from-the-macos-keychain-->
+

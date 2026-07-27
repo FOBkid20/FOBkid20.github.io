@@ -259,6 +259,56 @@ h6 span{ position:absolute; top:-3rem;}
   }
 }
 
+.nav-dropdown {
+    position: relative;
+}
+
+/* Specificity note: base .main-nav ul {display:flex} (1 class + 1 element)
+   would otherwise beat a plain .nav-dropdown-menu selector, so every rule
+   here is qualified with .main-nav to win. */
+.main-nav .nav-dropdown-menu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: #111133;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    z-index: 6000;
+}
+
+.main-nav .nav-dropdown:hover .nav-dropdown-menu,
+.main-nav .nav-dropdown:focus-within .nav-dropdown-menu {
+    display: flex;
+}
+
+.nav-dropdown-menu li {
+    width: 100%;
+}
+
+.nav-dropdown-menu a {
+    text-align: left;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+    .main-nav .nav-dropdown-menu {
+        display: flex;
+        position: static;
+        box-shadow: none;
+        min-width: 0;
+    }
+
+    .nav-dropdown-menu a {
+        padding-left: 40px;
+        font-size: 0.9rem;
+    }
+}
+
 .nav-search-item {
     position: relative;
     display: flex;
@@ -869,11 +919,27 @@ html.dark-mode .project-tile:hover, html.dark-mode .project-tile:focus {
    the column width and let height scale to match instead of overflowing. */
 img[height], video[height] {
     display: block;
-    max-width: 100%;
+    max-width: min(100%, 400px);
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
     margin: 1rem auto;
+}
+
+/* Entries with multiple photos/videos of the same thing (e.g. the
+   needlefelted fox, the Pet Costume Contest lineup) wrap them in
+   .image-row to lay side by side instead of stacking full-width. */
+.image-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem auto;
+}
+
+.image-row img[height], .image-row video[height] {
+    max-width: 200px;
+    margin: 0;
 }
 
 #tag-filter-section {
@@ -1337,6 +1403,11 @@ html.dark-mode .main-nav a, html.dark-mode .main-nav li a {
 
 html.dark-mode .main-nav a:hover, html.dark-mode .main-nav a:focus {
     color: #FFFFFF;
+}
+
+html.dark-mode .nav-dropdown-menu {
+    background-color: #000000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 html.dark-mode .theme-toggle-btn {
