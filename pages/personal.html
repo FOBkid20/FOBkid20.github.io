@@ -141,8 +141,12 @@
           <h6><span id="yearofdance"></span>Year of Dance</h6>
           <p>In 2024, I set out to sample as many styles of dance as I could. Illness kept me from trying anything outside the window of February through October, but within those eight months I danced 25 styles in depth and sampled another 18 briefly (under an hour each).</p>
 
-          <p><b>Styles Sampled in Depth (25):</b></p>
-          <ol class="multi-col-list">
+          <div class="row" id="dance-depth-row">
+            <center>
+              <button type="button" class="resume-toggle-btn" id="dance-depth-btn" aria-expanded="false" aria-controls="dance-depth-list" data-label="Styles Sampled in Depth (25)" onclick="toggleDanceList(this)">Styles Sampled in Depth (25)</button>
+            </center>
+          </div>
+          <ol class="multi-col-list" id="dance-depth-list" style="display: none;">
             <li>Hip-Hop</li>
             <li>Burlesque Jazz</li>
             <li>Contra</li>
@@ -170,8 +174,12 @@
             <li>Country Line Dance</li>
           </ol>
 
-          <p><b>Sampled Briefly (&lt;1 hr, 18):</b></p>
-          <ol class="multi-col-list">
+          <div class="row" id="dance-brief-row">
+            <center>
+              <button type="button" class="resume-toggle-btn" id="dance-brief-btn" aria-expanded="false" aria-controls="dance-brief-list" data-label="Sampled Briefly (&lt;1 hr, 18)" onclick="toggleDanceList(this)">Sampled Briefly (&lt;1 hr, 18)</button>
+            </center>
+          </div>
+          <ol class="multi-col-list" id="dance-brief-list" style="display: none;">
             <li>Irish Step</li>
             <li>Chinese Traditional/Folk (incl. Mongolian, Tibetan, Hmong)</li>
             <li>Merengue</li>
@@ -192,8 +200,12 @@
             <li>Square Dance</li>
           </ol>
 
-          <p><b>All Styles Ranked:</b></p>
-          <ol class="multi-col-list">
+          <div class="row" id="dance-ranked-row">
+            <center>
+              <button type="button" class="resume-toggle-btn" id="dance-ranked-btn" aria-expanded="false" aria-controls="dance-ranked-list" data-label="All Styles Ranked" onclick="toggleDanceList(this)">All Styles Ranked</button>
+            </center>
+          </div>
+          <ol class="multi-col-list" id="dance-ranked-list" style="display: none;">
             <li>Contra</li>
             <li>Tap</li>
             <li>Bollywood</li>
@@ -234,7 +246,7 @@
             <li>Hip-Hop</li>
           </ol>
 
-          <p><b>Skills and Tools: </b> Dance, Contra, Swing, Blues, Fusion, Tap, Ballet, Ballroom, Salsa, Hip-Hop</p>
+          <p><b>Skills and Tools: </b> Dance, Contra, Swing, Blues, Fusion, Tap, Ballet, Partner Dance, Social Dance</p>
           </div>
 
           <div class="project-entry">
@@ -292,6 +304,16 @@
           </div>
         </div>
       </section>
+
+      <script>
+        function toggleDanceList(btn) {
+          var list = document.getElementById(btn.getAttribute('aria-controls'));
+          var expanded = list.style.display !== 'none';
+          list.style.display = expanded ? 'none' : 'block';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          btn.textContent = expanded ? btn.dataset.label : 'Show Less';
+        }
+      </script>
 
       <section id="crafts" class="s-resume">
         <div class="overlay"></div>
