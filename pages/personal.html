@@ -138,6 +138,118 @@
 
         <div>
           <div class="project-entry">
+          <h6><span id="yearofdance"></span>Year of Dance</h6>
+          <p>In 2024, I set out to sample as many styles of dance as I could. Illness kept me from trying anything outside the window of February through October, but within those eight months I danced 25 styles in depth and sampled another 18 briefly (under an hour each).</p>
+
+          <div class="row" id="dance-depth-row">
+            <center>
+              <button type="button" class="resume-toggle-btn" id="dance-depth-btn" aria-expanded="false" aria-controls="dance-depth-list" data-label="Styles Sampled in Depth (25)" onclick="toggleDanceList(this)">Styles Sampled in Depth (25)</button>
+            </center>
+          </div>
+          <ol class="multi-col-list" id="dance-depth-list" style="display: none;">
+            <li>Hip-Hop</li>
+            <li>Burlesque Jazz</li>
+            <li>Contra</li>
+            <li>English Country</li>
+            <li>Tap</li>
+            <li>Zydeco</li>
+            <li>Fusion</li>
+            <li>Blues</li>
+            <li>Irish Ceili</li>
+            <li>Scottish Ceilidh</li>
+            <li>Salsa</li>
+            <li>Swing: Lindy Hop</li>
+            <li>Swing: Country</li>
+            <li>Clubbing</li>
+            <li>Waltz</li>
+            <li>Ballet</li>
+            <li>Balkan</li>
+            <li>Garba</li>
+            <li>Swing: West Coast</li>
+            <li>Hula</li>
+            <li>Zouk</li>
+            <li>Rapper</li>
+            <li>Bachata</li>
+            <li>Tango</li>
+            <li>Country Line Dance</li>
+          </ol>
+
+          <div class="row" id="dance-brief-row">
+            <center>
+              <button type="button" class="resume-toggle-btn" id="dance-brief-btn" aria-expanded="false" aria-controls="dance-brief-list" data-label="Sampled Briefly (&lt;1 hr, 18)" onclick="toggleDanceList(this)">Sampled Briefly (&lt;1 hr, 18)</button>
+            </center>
+          </div>
+          <ol class="multi-col-list" id="dance-brief-list" style="display: none;">
+            <li>Irish Step</li>
+            <li>Chinese Traditional/Folk (incl. Mongolian, Tibetan, Hmong)</li>
+            <li>Merengue</li>
+            <li>Egyptian Belly Dancing</li>
+            <li>Israeli</li>
+            <li>Greek</li>
+            <li>Turkish</li>
+            <li>Armenian</li>
+            <li>Bretagne</li>
+            <li>Bollywood</li>
+            <li>Appalachian Flatfooting</li>
+            <li>Ragtime Foxtrot</li>
+            <li>French Balfolk</li>
+            <li>Disco</li>
+            <li>Hustle</li>
+            <li>Maypole Dance</li>
+            <li>Dance Dance Revolution</li>
+            <li>Square Dance</li>
+          </ol>
+
+          <div class="row" id="dance-ranked-row">
+            <center>
+              <button type="button" class="resume-toggle-btn" id="dance-ranked-btn" aria-expanded="false" aria-controls="dance-ranked-list" data-label="All Styles Ranked" onclick="toggleDanceList(this)">All Styles Ranked</button>
+            </center>
+          </div>
+          <ol class="multi-col-list" id="dance-ranked-list" style="display: none;">
+            <li>Contra</li>
+            <li>Tap</li>
+            <li>Bollywood</li>
+            <li>Irish Step</li>
+            <li>Scottish Ceilidh</li>
+            <li>Fusion</li>
+            <li>Waltz</li>
+            <li>Theatre Dance</li>
+            <li>Ballet</li>
+            <li>Chinese Traditional</li>
+            <li>Garba</li>
+            <li>Hula</li>
+            <li>Lyrical</li>
+            <li>Appalachian Flatfooting</li>
+            <li>English Country</li>
+            <li>Egyptian Belly Dancing</li>
+            <li>Swing: Lindy Hop</li>
+            <li>Country Line Dance</li>
+            <li>Maypole</li>
+            <li>Blues</li>
+            <li>Ragtime Foxtrot</li>
+            <li>Bachata</li>
+            <li>Irish Ceili</li>
+            <li>Contemporary</li>
+            <li>Square Dance</li>
+            <li>Jazz</li>
+            <li>Merengue</li>
+            <li>Salsa</li>
+            <li>Burlesque Jazz</li>
+            <li>Rapper</li>
+            <li>Line Dance</li>
+            <li>Pointe</li>
+            <li>Balkan</li>
+            <li>Swing: Country</li>
+            <li>Disco</li>
+            <li>Modern</li>
+            <li>Zydeco</li>
+            <li>Hip-Hop</li>
+          </ol>
+
+          <p><b>Skills and Tools: </b> Dance, Contra, Swing, Blues, Fusion, Tap, Ballet, Partner Dance, Social Dance</p>
+          </div>
+
+          <div class="project-entry">
           <h6><span id="AVMS"></span>A Very Merry Sanctuary</h6>
           <p>I directed Seesaw's Spring production <i>A Very Merry Sanctuary</i>. Due to the pandemic, the final production was delivered in the form of an interactive website and mail-delivered props to follow along.</p>
           <p>See the website version of the show <a href="https://seesawtheatre.wixsite.com/seesawspringplay">here.</a></p>
@@ -192,6 +304,16 @@
           </div>
         </div>
       </section>
+
+      <script>
+        function toggleDanceList(btn) {
+          var list = document.getElementById(btn.getAttribute('aria-controls'));
+          var expanded = list.style.display !== 'none';
+          list.style.display = expanded ? 'none' : 'block';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          btn.textContent = expanded ? btn.dataset.label : 'Show Less';
+        }
+      </script>
 
       <section id="crafts" class="s-resume">
         <div class="overlay"></div>
