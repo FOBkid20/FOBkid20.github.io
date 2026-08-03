@@ -942,6 +942,29 @@ img[height], video[height] {
     margin: 0;
 }
 
+/* A captioned inline photo: the figure inherits img[height]'s sizing
+   since the <img> is still the height-tagged element, and the caption
+   sits centered underneath it. */
+.entry-photo {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.entry-photo img[height] {
+    margin: 0 auto;
+}
+
+.entry-photo figcaption {
+    margin-top: .4rem;
+    font-size: .85rem;
+    font-style: italic;
+    color: #4a5a7a;
+}
+
+html.dark-mode .entry-photo figcaption {
+    color: #6f9999;
+}
+
 /* Long enumerated lists (e.g. the Year of Dance style rankings) read
    better as a compact multi-column block than one long single column. */
 .multi-col-list {
