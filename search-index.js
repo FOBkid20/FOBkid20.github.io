@@ -90,6 +90,7 @@ var SEARCH_INDEX = [
 
     // Projects — Crafts
     { id: 'nycrossstitch', title: 'New York Cross Stitch', page: 'pages/personal.html', anchor: 'nycrossstitch', section: 'projects-crafts', excerpt: 'Took two years to complete, another two years to get framed and hung.', tags: ['Cross Stitch', 'Yarn'] },
+    { id: 'needlefeltpenguin', title: 'Needlefelted Penguin', page: 'pages/personal.html', anchor: 'needlefeltpenguin', section: 'projects-crafts', excerpt: 'A penguin named Pebbles, felted to kick off 2024.', tags: ['Needlefelting', 'Wool'] },
     { id: 'poliwag', title: 'Needlefelted Poliwag', page: 'pages/personal.html', anchor: 'poliwag', section: 'projects-crafts', excerpt: 'First freehand needlefelt project; won First Prize in Textiles at a work craft show.', tags: ['Needlefelting', 'Wool'] },
     { id: 'crossstitchstitch', title: 'Cross-Stitch', page: 'pages/personal.html', anchor: 'crossstitchstitch', section: 'projects-crafts', excerpt: 'Cross-stitched an image of Stitch and Angel, custom framed.', tags: ['Cross Stitch', 'Yarn'] },
     { id: 'needlefeltfox', title: 'Needlefelted Fox', page: 'pages/personal.html', anchor: 'needlefeltfox', section: 'projects-crafts', excerpt: 'Needlefelted a fox from a kit my brother gave me.', tags: ['Needlefelting', 'Wool'] },
