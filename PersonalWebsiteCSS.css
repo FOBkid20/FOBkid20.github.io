@@ -993,6 +993,25 @@ img[height], video[height] {
     color: #FFFFFF;
 }
 
+/* Per-entry "Skills and Tools" line: same pill look as the filter bar's
+   .tag-chip, but static (not a filter control), so it's not a <button>
+   and gets a default cursor instead of a pointer. */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .4rem;
+}
+
+.skills-tags b {
+    margin-right: .2rem;
+}
+
+.skill-tag {
+    display: inline-block;
+    cursor: default;
+}
+
 .project-entry.is-filtered-out {
     display: none;
 }
