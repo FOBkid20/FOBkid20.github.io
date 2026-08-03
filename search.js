@@ -210,7 +210,7 @@
     // drift check compares the current page's DOM count against only the
     // SEARCH_INDEX entries whose `page` matches it.
     var PROJECT_SECTION_SELECTORS = {
-        'pages/professional.html': '#technicalProjects .project-entry',
+        'pages/professional.html': '#technicalProjects .project-entry, #leadership .project-entry:not(.leadership-highlight)',
         'pages/personal.html': '#performing .project-entry, #crafts .project-entry, #writingEditing .project-entry, #lifeTravel .project-entry'
     };
 
