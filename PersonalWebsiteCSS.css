@@ -91,6 +91,12 @@ h1, .h1 {
     margin-bottom: 1.5rem;*/
 }
 
+@media screen and (max-width: 600px) {
+    h1, .h1 {
+        font-size: 2.4rem;
+    }
+}
+
 h2, .h2 {
     font-size: 3rem;
     /*margin-top: 4.2rem;
@@ -618,35 +624,38 @@ html.dark-mode .aboutMe-social-icons a {
     height: 33px;
 }
 
-.aboutMe-social-icons i, .aboutMe-social-icons span {
+.aboutMe-social-icons .social-icon, .aboutMe-social-icons span {
     line-height: 33px;
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
 
-.aboutMe-social-icons i {
-    font-size: 14px;
-    text-align: center;
-    display: inline-block;
+.aboutMe-social-icons .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 33px;
     height: 33px;
-    line-height: calc(33px - 4px);
+    line-height: normal;
     border: 2px solid #4a5a7a;  /* Match the Havana photo caption color */
     border-radius: 50%;
+    box-sizing: border-box;
+    color: #4a5a7a;
 }
 
-html.dark-mode .aboutMe-social-icons i {
+html.dark-mode .aboutMe-social-icons .social-icon {
     border-color: #6f9999;
+    color: #6f9999;
 }
 
-.aboutMe-social-icons li:hover i,
-.aboutMe-social-icons li a:focus i {
+.aboutMe-social-icons li:hover .social-icon,
+.aboutMe-social-icons li a:focus .social-icon {
     border-color: #006D77;
     color: #006D77;
 }
 
-html.dark-mode .aboutMe-social-icons li:hover i,
-html.dark-mode .aboutMe-social-icons li a:focus i {
+html.dark-mode .aboutMe-social-icons li:hover .social-icon,
+html.dark-mode .aboutMe-social-icons li a:focus .social-icon {
     border-color: #55bbcc;
     color: #55bbcc;
 }
