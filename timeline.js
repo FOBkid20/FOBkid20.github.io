@@ -204,6 +204,7 @@
         { id: 'show-cats-the-jellicle-ball', title: 'Cats: The Jellicle Ball', displayDate: 'Jul 3, 2026', start: { y: 2026, m: 7 }, category: 'shows', audience: ['personal'], description: 'Saw Cats: The Jellicle Ball on Broadway.' },
         { id: 'show-henry-vi-part-1', title: 'Henry VI: Part 1', displayDate: 'Jul 5, 2026', start: { y: 2026, m: 7 }, category: 'shows', audience: ['personal'], description: 'Saw Henry VI: Part 1 Off-Broadway.' },
         { id: 'show-ragtime', title: 'Ragtime', displayDate: 'Jul 7, 2026', start: { y: 2026, m: 7 }, category: 'shows', audience: ['personal'], description: 'Saw Ragtime on Broadway.' },
+        { id: 'show-titanique', title: 'Titanique', displayDate: 'Aug 8, 2026', start: { y: 2026, m: 8 }, category: 'shows', audience: ['personal'], description: 'Saw Titanique Off-Broadway.' },
     ];
 
     var CATEGORIES = [
