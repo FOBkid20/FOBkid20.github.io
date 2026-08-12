@@ -597,10 +597,27 @@
         if (prevScrollLeft !== null) scroll.scrollLeft = prevScrollLeft;
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        var root = document.getElementById('timeline-root');
-        if (!root) return;
-        renderTimeline(root);
-        refreshShowsFromSheet(root);
-    });
+    if (typeof document !== 'undefined') {
+        document.addEventListener('DOMContentLoaded', function () {
+            var root = document.getElementById('timeline-root');
+            if (!root) return;
+            renderTimeline(root);
+            refreshShowsFromSheet(root);
+        });
+    }
+
+    // No-op in the browser (module is undefined there); lets Node's test
+    // runner require() the pure helpers below without a DOM.
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = {
+            EVENTS: EVENTS,
+            monthIndex: monthIndex,
+            currentPage: currentPage,
+            resolveHref: resolveHref,
+            parseCSV: parseCSV,
+            slugifyShowTitle: slugifyShowTitle,
+            capitalizeTitle: capitalizeTitle,
+            buildShowsEvents: buildShowsEvents
+        };
+    }
 })();

@@ -226,9 +226,24 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        initSearch();
-        initTagFilter();
-        checkIndexDrift();
-    });
+    if (typeof document !== 'undefined') {
+        document.addEventListener('DOMContentLoaded', function () {
+            initSearch();
+            initTagFilter();
+            checkIndexDrift();
+        });
+    }
+
+    // No-op in the browser (module is undefined there); lets Node's test
+    // runner require() the pure helpers below without a DOM.
+    if (typeof module !== 'undefined' && module.exports) {
+        module.exports = {
+            currentPage: currentPage,
+            resolveEntryHref: resolveEntryHref,
+            buildSnippet: buildSnippet,
+            cleanPart: cleanPart,
+            buildResultLabel: buildResultLabel,
+            scoreEntry: scoreEntry
+        };
+    }
 })();
