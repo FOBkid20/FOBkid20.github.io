@@ -16,10 +16,6 @@ function pageExists(pageKey) {
     return Object.prototype.hasOwnProperty.call(PAGE_FILES, pageKey);
 }
 
-function repoFileExists(relativePath) {
-    return fs.existsSync(path.join(ROOT, relativePath));
-}
-
 const htmlCache = {};
 function loadPage(pageKey) {
     if (!htmlCache[pageKey]) {
@@ -48,4 +44,4 @@ function loadEvents() {
     return require(path.join(ROOT, 'timeline.js')).EVENTS;
 }
 
-module.exports = { ROOT, PAGE_FILES, pageExists, repoFileExists, loadPage, loadSearchIndex, loadEvents };
+module.exports = { ROOT, PAGE_FILES, pageExists, loadPage, loadSearchIndex, loadEvents };

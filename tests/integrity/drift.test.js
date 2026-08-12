@@ -1,14 +1,13 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { loadPage, loadSearchIndex } = require('./helpers');
+const path = require('node:path');
+const { ROOT, loadPage, loadSearchIndex } = require('./helpers');
 
-// Mirrors search.js's PROJECT_SECTION_SELECTORS + checkIndexDrift(), which
-// today only warns via console.warn at runtime. This makes the same check
-// a hard test failure instead of something that can silently go unnoticed.
-const PROJECT_SECTION_SELECTORS = {
-    'pages/professional.html': '#technicalProjects .project-entry, #leadership .project-entry:not(.leadership-highlight)',
-    'pages/personal.html': '#performing .project-entry, #crafts .project-entry, #writingEditing .project-entry, #lifeTravel .project-entry'
-};
+// Imports the real selectors from search.js (rather than a hand-copied
+// duplicate) so this test can't silently drift from the checkIndexDrift()
+// logic it's meant to mirror -- today that logic only warns via
+// console.warn at runtime; this makes the same check a hard test failure.
+const { PROJECT_SECTION_SELECTORS } = require(path.join(ROOT, 'search.js'));
 
 const { SEARCH_INDEX } = loadSearchIndex();
 

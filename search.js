@@ -243,7 +243,8 @@
             buildSnippet: buildSnippet,
             cleanPart: cleanPart,
             buildResultLabel: buildResultLabel,
-            scoreEntry: scoreEntry
+            scoreEntry: scoreEntry,
+            PROJECT_SECTION_SELECTORS: PROJECT_SECTION_SELECTORS
         };
     }
 })();

@@ -26,7 +26,7 @@ const MIME = {
 const server = http.createServer((req, res) => {
     const urlPath = decodeURIComponent((req.url || '/').split('?')[0]);
     const resolved = path.normalize(path.join(ROOT, urlPath));
-    if (!resolved.startsWith(ROOT)) {
+    if (resolved !== ROOT && !resolved.startsWith(ROOT + path.sep)) {
         res.writeHead(403);
         res.end('Forbidden');
         return;
