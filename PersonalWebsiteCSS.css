@@ -140,6 +140,31 @@ h6 span{ position:absolute; top:-3rem;}
     padding-right: 25px;
 }
 
+#resume .section-header h2 {
+    margin-bottom: .75rem;
+}
+
+.resume-download {
+    text-align: left;
+    /* Aligns with the .resume-timeline::before vertical line (6rem from its
+       own left edge), minus the 25px .section-header already contributes
+       via its own padding-left. */
+    margin: 0 0 1.5rem calc(6rem - 25px);
+}
+
+.resume-download-link {
+    display: inline-block;
+}
+
+.resume-download-link .pdf-icon {
+    display: inline;
+}
+
+.resume-download-link .pdf-icon svg {
+    vertical-align: text-bottom;
+    margin-right: .35rem;
+}
+
 /* ===================================================================
  * # header styles
  *
@@ -867,6 +892,10 @@ html.dark-mode .resume-timeline::before {
 
     .resume-date {
         text-align: left;
+    }
+
+    .resume-download {
+        margin-left: 0;
     }
 }
 
