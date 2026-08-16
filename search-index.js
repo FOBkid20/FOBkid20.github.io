@@ -87,6 +87,7 @@ var SEARCH_INDEX = [
     { id: 'smokemirrors', title: 'Smoke & Mirrors', page: 'pages/personal.html', anchor: 'smokemirrors', section: 'projects-performing', excerpt: "Historian and Vice President of Northwestern's magic club; performed rope and telepathy acts.", tags: ['Performing', 'Illusions'] },
     { id: 'wanderland', title: 'Wanderland', page: 'pages/personal.html', anchor: 'wanderland', section: 'projects-performing', excerpt: "Played The Fawn in Seesaw's production of Wanderland.", tags: ['Creative Thought', 'Performing', 'Working with Children', 'ASL'] },
     { id: 'snowday', title: 'Snow Day', page: 'pages/personal.html', anchor: 'snowday', section: 'projects-performing', excerpt: "Adventure Guide/Cast Member who puppeteered the Snow Bunny in Seesaw's Winter Event.", tags: ['Creative Thought', 'Performing', 'Working with Children', 'ASL', 'Puppetry'] },
+    { id: 'imme', title: "I'm Me", page: 'pages/personal.html', anchor: 'imme', section: 'projects-performing', excerpt: "Recorded a version of Us the Duo's song \"I'm Me\" customized to my own life.", tags: ['iMovie', 'GarageBand', 'Voiceover', 'Parody', 'Writing', 'Singing'] },
 
     // Projects — Crafts
     { id: 'nycrossstitch', title: 'New York Cross Stitch', page: 'pages/personal.html', anchor: 'nycrossstitch', section: 'projects-crafts', excerpt: 'Took two years to complete, another two years to get framed and hung.', tags: ['Cross Stitch', 'Yarn'] },
