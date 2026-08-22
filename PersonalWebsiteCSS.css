@@ -834,45 +834,74 @@ html.dark-mode .resume-toggle-btn:hover, html.dark-mode .resume-toggle-btn:focus
 }
 
 .resume-timeline {
-    position: relative;
     margin-bottom: 2rem;
-}
-
-.resume-timeline::before {
-    content: '';
-    position: absolute;
-    top: .3rem;
-    bottom: .3rem;
-    left: 6rem;
-    width: 2px;
-    background: rgba(1, 5, 7, 0.25);
-}
-
-html.dark-mode .resume-timeline::before {
-    background: rgba(168, 219, 219, 0.35);
 }
 
 .resume-entry {
     display: grid;
-    grid-template-columns: 5rem 1fr;
-    column-gap: 2rem;
-    margin-bottom: 1.75rem;
+    grid-template-columns: 1fr auto;
+    column-gap: 1.5rem;
+    align-items: start;
+    border: 1px solid rgba(1, 5, 7, 0.12);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.55);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(17, 17, 51, 0.08);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+html.dark-mode .resume-entry {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(30, 41, 59, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
 .resume-date {
+    grid-column: 2;
+    grid-row: 1;
     min-width: 0;
     text-align: right;
     font-weight: 600;
     padding-top: .2rem;
     white-space: normal;
+    color: rgba(1, 5, 7, 0.6);
+}
+
+html.dark-mode .resume-date {
+    color: rgba(255, 255, 255, 0.55);
 }
 
 .resume-content {
+    grid-column: 1;
+    grid-row: 1;
     min-width: 0;
 }
 
 .resume-content h6 {
     margin-top: 0;
+}
+
+.resume-title-row {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.resume-title-row h6 {
+    margin-top: 0;
+}
+
+.resume-logo {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid rgba(1, 5, 7, 0.1);
+    border-radius: 8px;
+    padding: 4px;
 }
 
 .resume-location {
@@ -881,17 +910,21 @@ html.dark-mode .resume-timeline::before {
 }
 
 @media screen and (max-width: 600px) {
-    .resume-timeline::before {
-        display: none;
-    }
-
     .resume-entry {
         grid-template-columns: 1fr;
         row-gap: .25rem;
+        padding: 1rem 1.1rem;
     }
 
     .resume-date {
+        grid-column: 1;
+        grid-row: 2;
         text-align: left;
+    }
+
+    .resume-content {
+        grid-column: 1;
+        grid-row: 1;
     }
 
     .resume-download {
@@ -1071,6 +1104,59 @@ html.dark-mode .entry-photo figcaption {
 .skill-tag {
     display: inline-block;
     cursor: default;
+}
+
+.project-entry {
+    border: 1px solid rgba(1, 5, 7, 0.12);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.55);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(17, 17, 51, 0.08);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+html.dark-mode .project-entry {
+    border-color: rgba(255, 255, 255, 0.12);
+    background: rgba(30, 41, 59, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.project-entry h6 {
+    margin-top: 0;
+}
+
+.project-title-row {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.project-title-row h6 {
+    margin-top: 0;
+}
+
+.project-logo {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    object-fit: contain;
+    background: #fff;
+    border: 1px solid rgba(1, 5, 7, 0.1);
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.project-entry img,
+.project-entry video {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .project-entry {
+        padding: 1rem 1.1rem;
+    }
 }
 
 .project-entry.is-filtered-out {
