@@ -23,6 +23,7 @@ var SEARCH_INDEX = [
     { id: 'job-pac', title: 'The Performing Arts Connection — Counselor, Assistant Instructor', page: 'pages/professional.html', anchor: 'job-pac', section: 'resume', excerpt: 'Led activities and taught a Musical Theater class for grades K-4 (Jun 2012 – Jun 2016).' },
 
     // Certifications
+    { id: 'cert-datacamp-claude-code', title: 'Claude Code in Action', page: 'pages/professional.html', anchor: 'cert-datacamp-claude-code', section: 'certifications', excerpt: 'DataCamp (Aug 2026).' },
     { id: 'cert-rtc-summer', title: 'Rewrite AI Summer Challenge', page: 'pages/professional.html', anchor: 'cert-rtc-summer', section: 'certifications', excerpt: "Rewriting the Code, credentialed via IBM's \"Build an AI Agent\" (Jul 2026)." },
     { id: 'cert-figjam', title: 'FigJam for Non-designers', page: 'pages/professional.html', anchor: 'cert-figjam', section: 'certifications', excerpt: 'LinkedIn Learning (Nov 2025).' },
     { id: 'cert-figma-essential', title: 'Figma Essential Training', page: 'pages/professional.html', anchor: 'cert-figma-essential', section: 'certifications', excerpt: 'LinkedIn Learning (Nov 2025).' },
