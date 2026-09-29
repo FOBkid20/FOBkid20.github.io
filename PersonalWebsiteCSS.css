@@ -145,6 +145,9 @@ h6 span{ position:absolute; top:-3rem;}
 }
 
 .resume-download {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
     text-align: left;
     /* Aligns with the .resume-timeline::before vertical line (6rem from its
        own left edge), minus the 25px .section-header already contributes
@@ -152,10 +155,18 @@ h6 span{ position:absolute; top:-3rem;}
     margin: 0 0 1.5rem calc(6rem - 25px);
 }
 
+.resume-download .pdf-icon {
+    display: inline-flex;
+    color: #111133;
+}
+
+html.dark-mode .resume-download .pdf-icon {
+    color: #A8DBDB;
+}
+
 .resume-download-link {
     display: inline-flex;
     align-items: center;
-    gap: .35rem;
     text-decoration: none;
 }
 
@@ -169,14 +180,6 @@ html.dark-mode .resume-download-link:focus,
 html.dark-mode .resume-download-link:active {
     color: #A8DBDB;
     background-color: rgba(168, 219, 219, 0.12);
-}
-
-.resume-download-link .pdf-icon {
-    display: inline-flex;
-}
-
-.resume-download-link .pdf-icon svg {
-    vertical-align: text-bottom;
 }
 
 /* ===================================================================
