@@ -153,16 +153,30 @@ h6 span{ position:absolute; top:-3rem;}
 }
 
 .resume-download-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    text-decoration: none;
+}
+
+.resume-download-link:hover, .resume-download-link:focus, .resume-download-link:active {
+    color: #111133;
+    background-color: rgba(17, 17, 51, 0.08);
+}
+
+html.dark-mode .resume-download-link:hover,
+html.dark-mode .resume-download-link:focus,
+html.dark-mode .resume-download-link:active {
+    color: #A8DBDB;
+    background-color: rgba(168, 219, 219, 0.12);
 }
 
 .resume-download-link .pdf-icon {
-    display: inline;
+    display: inline-flex;
 }
 
 .resume-download-link .pdf-icon svg {
     vertical-align: text-bottom;
-    margin-right: .35rem;
 }
 
 /* ===================================================================
