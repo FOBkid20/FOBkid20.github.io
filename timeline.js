@@ -428,9 +428,13 @@
     function renderTimeline(root, opts) {
         opts = opts || {};
         var prevScrollLeft = null;
+        var wasAtEnd = false;
         if (opts.preserveScroll) {
             var prevScroll = root.querySelector('.timeline-scroll');
-            if (prevScroll) prevScrollLeft = prevScroll.scrollLeft;
+            if (prevScroll) {
+                prevScrollLeft = prevScroll.scrollLeft;
+                wasAtEnd = prevScroll.scrollLeft + prevScroll.clientWidth >= prevScroll.scrollWidth - 2;
+            }
         }
 
         // data-audience-filter on the root narrows the rendered events to
@@ -600,7 +604,14 @@
         root.appendChild(scroll);
         root.appendChild(detail);
 
-        if (prevScrollLeft !== null) scroll.scrollLeft = prevScrollLeft;
+        // Default to the present (right edge). On a background re-render,
+        // stay pinned to the right if the user was already there (the track
+        // may have grown), otherwise restore wherever they scrolled to.
+        if (prevScrollLeft === null || wasAtEnd) {
+            scroll.scrollLeft = scroll.scrollWidth;
+        } else {
+            scroll.scrollLeft = prevScrollLeft;
+        }
     }
 
     if (typeof document !== 'undefined') {
