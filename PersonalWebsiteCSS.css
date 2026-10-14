@@ -173,19 +173,32 @@ h6 span{ position:absolute; top:-3rem;}
     margin: 0 0 1.5rem 0;
 }
 
-.resume-download .pdf-icon {
-    display: inline-flex;
-    color: #111133;
-}
-
-html.dark-mode .resume-download .pdf-icon {
-    color: #A8DBDB;
-}
-
 .resume-download-link {
+    position: relative;
     display: inline-flex;
     align-items: center;
     text-decoration: none;
+}
+
+/* The icon overlays the label on hover/focus; the label stays in layout
+   (just transparent) so the button never changes size. */
+.resume-download-link .pdf-icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.resume-download-link:hover .resume-download-label,
+.resume-download-link:focus .resume-download-label {
+    opacity: 0;
+}
+
+.resume-download-link:hover .pdf-icon,
+.resume-download-link:focus .pdf-icon {
+    opacity: 1;
 }
 
 .resume-download-link:hover, .resume-download-link:focus, .resume-download-link:active {
@@ -936,7 +949,7 @@ html.dark-mode .resume-date {
     background: #fff;
     border: 1px solid rgba(1, 5, 7, 0.1);
     border-radius: 8px;
-    padding: 4px;
+    padding: 1px;
 }
 
 .resume-location {
@@ -1084,14 +1097,14 @@ html.dark-mode .entry-photo figcaption {
     break-inside: avoid;
 }
 
+/* Sits inside a section, directly under its header, so it inherits the
+   section's own background and side padding. */
 #tag-filter-section {
-    background-color: #DBFDFD; /* matches .s-resume/.s-projects section overlay color */
-    padding-top: 1.5rem;
+    padding-top: 1rem;
 }
 
-#tag-filter-section {
-    padding-left: max(25px, calc((100% - 1100px) / 2));
-    padding-right: max(25px, calc((100% - 1100px) / 2));
+.s-resume.s-filter-only {
+    padding-bottom: 1.5rem;
 }
 
 #tag-filter-hint {
@@ -1185,7 +1198,7 @@ html.dark-mode .project-entry {
     background: #fff;
     border: 1px solid rgba(1, 5, 7, 0.1);
     border-radius: 8px;
-    padding: 4px;
+    padding: 1px;
 }
 
 .project-entry img,
@@ -1694,10 +1707,6 @@ html.dark-mode .s-aboutMe .overlay,
 html.dark-mode .s-resume .overlay,
 html.dark-mode .s-extracurriculars .overlay,
 html.dark-mode .s-projects .overlay {
-    background-color: #151515;
-}
-
-html.dark-mode #tag-filter-section {
     background-color: #151515;
 }
 
