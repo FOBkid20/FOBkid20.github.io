@@ -939,6 +939,7 @@ html.dark-mode .resume-date {
 
 .resume-title-row h6 {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .resume-logo {
@@ -953,8 +954,13 @@ html.dark-mode .resume-date {
 }
 
 .resume-location {
-    margin: -.5rem 0 .5rem;
+    margin: -.5rem 0 0;
+    padding-bottom: 0;
     font-style: italic;
+}
+
+.resume-title-row + .resume-location {
+    margin-top: .5rem;
 }
 
 @media screen and (max-width: 600px) {
