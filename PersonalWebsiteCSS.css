@@ -939,6 +939,7 @@ html.dark-mode .resume-date {
 
 .resume-title-row h6 {
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 .resume-logo {
@@ -953,8 +954,13 @@ html.dark-mode .resume-date {
 }
 
 .resume-location {
-    margin: -.5rem 0 .5rem;
+    margin: -.5rem 0 0;
+    padding-bottom: 0;
     font-style: italic;
+}
+
+.resume-title-row + .resume-location {
+    margin-top: .5rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -1100,7 +1106,7 @@ html.dark-mode .entry-photo figcaption {
 /* Sits inside a section, directly under its header, so it inherits the
    section's own background and side padding. */
 #tag-filter-section {
-    padding-top: 1rem;
+    margin-top: -1.5rem;
 }
 
 .s-resume.s-filter-only {
@@ -1204,6 +1210,10 @@ html.dark-mode .project-entry {
 .project-entry img,
 .project-entry video {
     max-width: 100%;
+}
+
+.project-entry img.qr-image {
+    max-width: 260px;
 }
 
 @media screen and (max-width: 600px) {

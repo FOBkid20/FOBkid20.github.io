@@ -37,6 +37,7 @@ var SEARCH_INDEX = [
     // Jobs & Community
     { id: 'ec-contra', title: 'Contra Dancing', page: 'pages/personal.html', anchor: 'ec-contra', section: 'jobs-community', excerpt: "Regularly volunteers for New York City's CDNY and BKC contra dances." },
     { id: 'ec-theatre', title: 'Attending Theatre', page: 'pages/personal.html', anchor: 'ec-theatre', section: 'jobs-community', excerpt: 'Sees most Broadway shows plus Off- and Off-Off-Broadway productions.' },
+    { id: 'ec-coopboard', title: 'Coop Board Member', page: 'pages/personal.html', anchor: 'ec-coopboard', section: 'jobs-community', excerpt: 'Secretary (2026) and board member (2025) of my 20-unit building\'s coop board.' },
     { id: 'ec-happiness', title: 'Happiness Club', page: 'pages/personal.html', anchor: 'ec-happiness', section: 'jobs-community', excerpt: 'Co-Chair, planning events like the Welcome Bonfire, Pie a Professor, and Happiness Week.' },
     { id: 'ec-seesaw', title: 'Seesaw Theatre', page: 'pages/personal.html', anchor: 'ec-seesaw', section: 'jobs-community', excerpt: 'Director, teaching artist, and cast member in sensory theatre for autistic and disabled children.' },
     { id: 'ec-hackathons', title: 'Hackathons', page: 'pages/personal.html', anchor: 'ec-hackathons', section: 'jobs-community', excerpt: 'Thought Jar, HeartBeat, and Intern Prep hackathon projects.' },
@@ -53,6 +54,7 @@ var SEARCH_INDEX = [
     { id: 'happy-pieaprof', title: 'Pie A Professor', page: 'pages/Happiness.html', anchor: 'happy-pieaprof', section: 'happiness', excerpt: 'Pi Day event where professors volunteered to be pied in the face (Winter 2018).' },
 
     // Projects — Computer Science
+    { id: 'thankyoufive', title: 'Thank You Five', page: 'pages/professional.html', anchor: 'thankyoufive', section: 'projects-cs', excerpt: 'App for documenting and reviewing theatre experiences, built with Claude Code, Expo/React Native, and Supabase.', tags: ['Vibe Coding', 'User Interviews', 'User Research', 'Canva', 'Design', 'UX', 'Analytics', 'Strategy', 'Vision', 'Claude Code'] },
     { id: 'bathroomapp', title: 'Bathroom App', page: 'pages/professional.html', anchor: 'bathroomapp', section: 'projects-cs', excerpt: 'Built with Claude Code, ranks bathrooms on a personal quality scale.', tags: ['Claude Code', 'Supabase', 'Git', 'Database Design', 'Vibe Coding', 'API & Geospatial Data Management'] },
     { id: 'chatgptwebsite', title: 'Using ChatGPT to Code a Personal Website', page: 'pages/professional.html', anchor: 'chatgptwebsite', section: 'projects-cs', excerpt: 'Let ChatGPT build a personal website — it did better in five minutes than months of effort.', tags: ['Basic HTML/CSS knowledge for touch-ups', 'Vibe Coding'] },
     { id: 'genderbias', title: 'Identifying Gender Bias in Movie Reviews', page: 'pages/professional.html', anchor: 'genderbias', section: 'projects-cs', excerpt: 'Replicated a connotation-frames study on agency and power using movie reviews.', tags: ['Python', 'spaCy', 'Pandas', 'Regular Expressions', 'Research'] },
