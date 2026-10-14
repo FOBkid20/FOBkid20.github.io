@@ -1097,14 +1097,14 @@ html.dark-mode .entry-photo figcaption {
     break-inside: avoid;
 }
 
+/* Sits inside a section, directly under its header, so it inherits the
+   section's own background and side padding. */
 #tag-filter-section {
-    background-color: #DBFDFD; /* matches .s-resume/.s-projects section overlay color */
-    padding-top: 1.5rem;
+    padding-top: 1rem;
 }
 
-#tag-filter-section {
-    padding-left: max(25px, calc((100% - 1100px) / 2));
-    padding-right: max(25px, calc((100% - 1100px) / 2));
+.s-resume.s-filter-only {
+    padding-bottom: 1.5rem;
 }
 
 #tag-filter-hint {
@@ -1707,10 +1707,6 @@ html.dark-mode .s-aboutMe .overlay,
 html.dark-mode .s-resume .overlay,
 html.dark-mode .s-extracurriculars .overlay,
 html.dark-mode .s-projects .overlay {
-    background-color: #151515;
-}
-
-html.dark-mode #tag-filter-section {
     background-color: #151515;
 }
 
