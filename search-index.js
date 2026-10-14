@@ -37,6 +37,7 @@ var SEARCH_INDEX = [
     // Jobs & Community
     { id: 'ec-contra', title: 'Contra Dancing', page: 'pages/personal.html', anchor: 'ec-contra', section: 'jobs-community', excerpt: "Regularly volunteers for New York City's CDNY and BKC contra dances." },
     { id: 'ec-theatre', title: 'Attending Theatre', page: 'pages/personal.html', anchor: 'ec-theatre', section: 'jobs-community', excerpt: 'Sees most Broadway shows plus Off- and Off-Off-Broadway productions.' },
+    { id: 'ec-coopboard', title: 'Coop Board Member', page: 'pages/personal.html', anchor: 'ec-coopboard', section: 'jobs-community', excerpt: 'Secretary (2026) and board member (2025) of my 20-unit building\'s coop board.' },
     { id: 'ec-happiness', title: 'Happiness Club', page: 'pages/personal.html', anchor: 'ec-happiness', section: 'jobs-community', excerpt: 'Co-Chair, planning events like the Welcome Bonfire, Pie a Professor, and Happiness Week.' },
     { id: 'ec-seesaw', title: 'Seesaw Theatre', page: 'pages/personal.html', anchor: 'ec-seesaw', section: 'jobs-community', excerpt: 'Director, teaching artist, and cast member in sensory theatre for autistic and disabled children.' },
     { id: 'ec-hackathons', title: 'Hackathons', page: 'pages/personal.html', anchor: 'ec-hackathons', section: 'jobs-community', excerpt: 'Thought Jar, HeartBeat, and Intern Prep hackathon projects.' },
