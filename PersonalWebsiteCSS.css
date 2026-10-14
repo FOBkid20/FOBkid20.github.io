@@ -1106,7 +1106,7 @@ html.dark-mode .entry-photo figcaption {
 /* Sits inside a section, directly under its header, so it inherits the
    section's own background and side padding. */
 #tag-filter-section {
-    padding-top: 1rem;
+    margin-top: -1.5rem;
 }
 
 .s-resume.s-filter-only {
