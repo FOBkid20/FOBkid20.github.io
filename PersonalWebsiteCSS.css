@@ -145,8 +145,21 @@ h6 span{ position:absolute; top:-3rem;}
     margin-top: 0;
 }
 
+#resume .section-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 1.5rem;
+    row-gap: .5rem;
+    margin-bottom: 1rem;
+}
+
 #resume .section-header h2 {
-    margin-bottom: .75rem;
+    margin-bottom: 0;
+}
+
+#resume .section-header .resume-download {
+    margin: 0;
 }
 
 .resume-download {
@@ -1734,6 +1747,67 @@ html.dark-mode .timeline-legend-item.timeline-cat-other .timeline-legend-dot {
 html.dark-mode .timeline-marker.timeline-cat-shows, html.dark-mode .timeline-bar.timeline-cat-shows,
 html.dark-mode .timeline-legend-item.timeline-cat-shows .timeline-legend-dot {
     background-color: #FF8929;
+}
+
+/* Collapsible entry cards: a - / + button in the top right; when collapsed
+   only the heading (and a resume entry's date) stays visible. */
+.has-collapse {
+    position: relative;
+}
+
+.collapse-toggle {
+    position: absolute;
+    top: .85rem;
+    right: .85rem;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 1px solid #111133;
+    border-radius: 50%;
+    background-color: transparent;
+    color: #111133;
+    font-family: inherit;
+    font-size: 1.1rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.collapse-toggle:hover, .collapse-toggle:focus {
+    background-color: rgba(17, 17, 51, 0.08);
+}
+
+html.dark-mode .collapse-toggle {
+    border-color: #A8DBDB;
+    color: #A8DBDB;
+}
+
+html.dark-mode .collapse-toggle:hover, html.dark-mode .collapse-toggle:focus {
+    background-color: rgba(168, 219, 219, 0.12);
+}
+
+.resume-entry.has-collapse .resume-date {
+    margin-right: 2.5rem;
+}
+
+.project-entry.has-collapse > h6,
+.project-entry.has-collapse > .project-title-row {
+    margin-right: 2.5rem;
+}
+
+.resume-entry.is-collapsed .resume-content > :not(h6):not(.resume-title-row) {
+    display: none;
+}
+
+.project-entry.is-collapsed > :not(h6):not(.project-title-row):not(.collapse-toggle) {
+    display: none;
+}
+
+.is-collapsed h6 {
+    margin-bottom: 0;
+}
+
+.is-collapsed .resume-date {
+    padding-top: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
