@@ -133,11 +133,16 @@ h6 span{ position:absolute; top:-3rem;}
  * ## section header
  * ------------------------------------------------------------------- */
 .section-header {
-    text-align: center;
+    text-align: left;
     /*position: relative;*/
     padding-top: 3rem;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section-header h2 {
+    font-weight: bold;
+    margin-top: 0;
 }
 
 #resume .section-header h2 {
@@ -152,7 +157,7 @@ h6 span{ position:absolute; top:-3rem;}
     /* Aligns with the .resume-timeline::before vertical line (6rem from its
        own left edge), minus the 25px .section-header already contributes
        via its own padding-left. */
-    margin: 0 0 1.5rem calc(6rem - 25px);
+    margin: 0 0 1.5rem 0;
 }
 
 .resume-download .pdf-icon {
@@ -799,8 +804,8 @@ html.dark-mode .aboutMe-social-icons span {
     background-color: transparent;
     color: #010507;
     position: relative;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: max(25px, calc((100% - 1100px) / 2));
+    padding-right: max(25px, calc((100% - 1100px) / 2));
 }
 
 .s-resume .shadow-overlay {
@@ -1071,12 +1076,17 @@ html.dark-mode .entry-photo figcaption {
     padding-top: 1.5rem;
 }
 
+#tag-filter-section {
+    padding-left: max(25px, calc((100% - 1100px) / 2));
+    padding-right: max(25px, calc((100% - 1100px) / 2));
+}
+
 #tag-filter-hint {
     max-width: 40rem;
-    margin: 0 auto;
-    padding: 0 25px 1rem;
+    margin: 0;
+    padding: 0 0 1rem;
     font-size: .9rem;
-    text-align: center;
+    text-align: left;
     color: #4a5a7a;
 }
 
@@ -1084,8 +1094,8 @@ html.dark-mode .entry-photo figcaption {
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
-    justify-content: center;
-    padding: 0 25px 2rem;
+    justify-content: flex-start;
+    padding: 0 0 2rem;
 }
 
 .tag-chip {
@@ -1233,10 +1243,13 @@ html.dark-mode .project-entry {
     position: relative;
 } */
 
+.extracurriculars-content {
+    padding-left: max(25px, calc((100% - 1100px) / 2));
+    padding-right: max(25px, calc((100% - 1100px) / 2));
+}
+
 .extracurriculars-content__main {
     position: relative;
-    padding-left: 25px;
-    padding-right: 25px;
 }
 
 /* ===================================================================
@@ -1248,8 +1261,8 @@ html.dark-mode .project-entry {
     background-color: transparent;
     color: #010507;
     position: relative;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: max(25px, calc((100% - 1100px) / 2));
+    padding-right: max(25px, calc((100% - 1100px) / 2));
 }
 
 .s-projects .shadow-overlay {
