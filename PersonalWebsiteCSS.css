@@ -1212,6 +1212,10 @@ html.dark-mode .project-entry {
     max-width: 100%;
 }
 
+.project-entry img.qr-image {
+    max-width: 260px;
+}
+
 @media screen and (max-width: 600px) {
     .project-entry {
         padding: 1rem 1.1rem;
