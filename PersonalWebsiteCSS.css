@@ -949,7 +949,7 @@ html.dark-mode .resume-date {
     background: #fff;
     border: 1px solid rgba(1, 5, 7, 0.1);
     border-radius: 8px;
-    padding: 4px;
+    padding: 1px;
 }
 
 .resume-location {
@@ -1198,7 +1198,7 @@ html.dark-mode .project-entry {
     background: #fff;
     border: 1px solid rgba(1, 5, 7, 0.1);
     border-radius: 8px;
-    padding: 4px;
+    padding: 1px;
 }
 
 .project-entry img,
